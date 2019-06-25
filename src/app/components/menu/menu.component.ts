@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MenuService} from '../../services/menu.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  public expanded: boolean;
+
+  constructor(private menuService: MenuService) {
+    this.expanded = this.menuService.isExpanded.getValue();
+    this.menuService.isExpanded
+      .subscribe((expanded: boolean) => {
+        this.expanded = expanded;
+        console.log('menu toggled in component', this.expanded);
+      });
+  }
 
   ngOnInit() {
   }
 
+  toggleMenu() {
+    this.menuService.toggleMenu();
+  }
 }

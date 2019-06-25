@@ -1,5 +1,6 @@
 
 import {Component, HostListener, OnInit} from '@angular/core';
+import {MenuService} from '../../services/menu.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +11,7 @@ export class NavbarComponent implements OnInit {
 
   public hasScrolled: boolean;
 
-  constructor() {
+  constructor(private menuService: MenuService) {
   }
 
   ngOnInit() {
@@ -19,8 +20,14 @@ export class NavbarComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
 
-    const offset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    offset > 16 ? this.hasScrolled = true : this.hasScrolled = false;
+    const offset =     window.pageYOffset
+                    || document.documentElement.scrollTop
+                    || document.body.scrollTop
+                    || 0;
+    this.hasScrolled = offset > 16;
   }
 
+  toggleMenu() {
+    this.menuService.toggleMenu();
+  }
 }

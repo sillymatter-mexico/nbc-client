@@ -1,19 +1,18 @@
-<div class="container-fluid sticky-top app-navbar" [ngClass]="{'has-shadow' : hasScrolled}">
-  <div class="row justify-content-center p-3">
+
+  <div class="row justify-content-center sticky-top app-navbar mx-n3 px-3 pb-3 pt-3 pt-md-5" [ngClass]="{'has-shadow' : hasScrolled}">
     <div class="col-3 col-md-auto col-lg-4 d-none d-sm-block text-center text-md-left">
       <img src="/assets/img/logos/logo_universal.png" alt="" class="img-fluid navbar-logo logo-nbc">
     </div>
     <div class="col-3 col-md-4 text-center d-none d-sm-block">
       <img src="/assets/img/logos/logo_club.png" alt="" class="img-fluid navbar-logo logo-club">
     </div>
-    <div class="col-12 col-sm-6 col-md-auto col-lg-4 text-center align-vertical-middle">
+    <div class="col-12 col-sm-6 col-md-auto col-lg-4 text-center text-md-right align-vertical-middle">
       <button class="app-btn navbar-button text-uppercase mt-2">
         Registrarme
       </button>
-      <i-feather name="menu" id="navbar-menu"
+      <i-feather name="menu" id="navbar-menu" (click)="toggleMenu()"
                  class="text-white mt-3 ml-0 mt-md-2 ml-sm-3 cursor-pointer">
       </i-feather>
     </div>
   </div>
-</div>
 
