@@ -1,0 +1,118 @@
+
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+  &.expanded {
+    height: 100%;
+  }
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    .privacy-link {
+      color: white;
+      opacity: 1;
+      font-size: 20px;
+      margin-top: 80px;
+      text-decoration: underline;
+      &:after {
+        content: '';
+        width: 0;
+        background-color: transparent;
+      }
+      &:hover {
+        color: rgba(199,22,81,1);
+      }
+    }
+  }
+  a {
+    padding: 24px 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    opacity: 0.5;
+    display: block;
+    transition: 0.3s;
+    position: relative;
+    &:after {
+      content: '';
+      bottom: 0;
+      position: absolute;
+      left: calc(50% - 125px);
+      width: 250px;
+      background: -moz-linear-gradient(left,  rgba(199,22,81,1) 0%, rgba(240,90,38,1) 100%);
+      background: -webkit-linear-gradient(left,  rgba(199,22,81,1) 0%,rgba(240,90,38,1) 100%);
+      background: linear-gradient(to right,  rgba(199,22,81,1) 0%,rgba(240,90,38,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c71651', endColorstr='#f05a26',GradientType=1 );
+      opacity: 0;
+      height: 3px;
+      z-index: 100;
+      transition: 0.3s;
+    }
+    &:hover, &:focus {
+      opacity: 1;
+      font-size: 40px;
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  .btn-close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    &:hover, &:focus {
+      font-size: 60px;
+    }
+    &:after {
+      content: '';
+      width: 0;
+      background-color: transparent;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 575.98px) {
+  .overlay {
+    .overlay-content {
+      top: 10%;
+      .privacy-link {
+        margin-top: 64px;
+        font-size: 16px;
+      }
+    }
+    a {
+      font-size: 24px;
+      &:hover {
+        font-size: 28px;
+      }
+      &:after {
+        left: calc(50% - 75px);
+        width: 150px;
+        bottom: 20px;
+      }
+    }
+    .btn-close  {
+      font-size: 40px;
+      top: -5px;
+      right: 10px;
+      &:hover, &:focus {
+        font-size: 40px;
+      }
+    }
+  }
+}
