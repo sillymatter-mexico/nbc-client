@@ -17,19 +17,20 @@
   transition: 0.5s;
   cursor: pointer;
   display: inline-block;
-  background: -moz-linear-gradient(left,  rgba(199,22,81,1) 0%, rgba(240,90,38,1) 100%);
-  background: -webkit-linear-gradient(left,  rgba(199,22,81,1) 0%,rgba(240,90,38,1) 100%);
-  background: linear-gradient(to right,  rgba(199,22,81,1) 0%,rgba(240,90,38,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c71651', endColorstr='#f05a26',GradientType=1 );
-  background-size: 380px;
+  background: rgb(199,22,81);
+  background: -moz-linear-gradient(left, rgba(199,22,81,1) 0%, rgba(240,90,38,1) 50%, rgba(244,194,29,1) 100%);
+  background: -webkit-linear-gradient(left, rgba(199,22,81,1) 0%,rgba(240,90,38,1) 50%,rgba(244,194,29,1) 100%);
+  background: linear-gradient(to right, rgba(199,22,81,1) 0%,rgba(240,90,38,1) 50%,rgba(244,194,29,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c71651', endColorstr='#f4c21d',GradientType=1 );
+  background-size: 200%;
   background-position-x: -1px;
   &:hover {
-    background-position-x: -190px;
+    background-position-x: 50%;
     border: 1px solid transparent;
   }
   &:active {
     outline: 0 none;
-    background-position-x: -100px;
+    background-position-x: 90%;
   }
   &:focus {
     outline: 0 none;
@@ -44,4 +45,44 @@
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.font-volte-regular {
+  font-family: 'Volte Regular', sans-serif;
+  line-height: 0.95;
+}
+
+.font-volte-semibold {
+  font-family: 'Volte Semibold', sans-serif;
+}
+
+.font-volte-bold {
+  font-family: 'Volte Bold', sans-serif;
+}
+
+.font-cg-regular {
+  font-family: 'Century Gothic Regular', sans-serif;
+}
+
+.font-cg-bold {
+  font-family: 'Century Gothic Bold', sans-serif;
+}
+
+.font-montserrat-regular {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.font-montserrat-semibold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.font-montserrat-bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+.text-pink {
+  color: #E92945;
 }

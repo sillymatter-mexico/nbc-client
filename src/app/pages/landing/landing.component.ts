@@ -12,4 +12,7 @@ export class LandingComponent implements OnInit {
   ngOnInit() {
   }
 
+  scrollTo(start: HTMLDivElement) {
+    start.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+  }
 }
