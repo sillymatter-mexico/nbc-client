@@ -1,8 +1,46 @@
 <div class="container-fluid px-3 pb-3 pt-0">
   <app-navbar></app-navbar>
   <div class="row">
-    <div class="col-12">
-      <p>Landing</p>
+    <div class="col-12 text-center mt-lg-5 pt-md-5">
+      <img src="/assets/img/logos/logo_agente.png" alt="" class="img-fluid d-inline-block w-75 my-5 landing-logo">
+      <p class="font-volte-regular text-white text-uppercase px-3 px-md-5 landing-text mt-md-5">
+        <span class="font-volte-bold">Club premier</span>
+        te invita a participar por un increíble viaje, <br class="d-none d-xl-block">
+        juega y  completa tu entrenamiento.
+      </p>
+      <button class="app-btn w-100 landing-button my-3 my-md-5" (click)="scrollTo(start)">
+        <span class="text-uppercase">Ver más</span>
+      </button>
     </div>
+  </div>
+  <div class="row px-0 px-md-5 pb-5 text-white landing-section justify-content-center align-items-xl-end bg-map " id="section-1">
+    <div class="col-auto text-right p-0" #start>
+      <h2 class="section-number font-volte-bold m-0">01</h2>
+    </div>
+    <div class="col-9 col-lg-8">
+      <div class="row justify-content-center">
+        <div class="col-12 col-xl-4 text-pink text-xl-right pr-0">
+          <h4 class="text-uppercase section-heading font-montserrat-bold">
+            Conviertete<br class="d-none d-xl-block">
+             en agente
+          </h4>
+        </div>
+        <div class="col-12 col-xl-8 pr-0">
+          <p class="m-0 section-text font-volte-regular text-uppercase">
+            Comenzará su viaje a Chicago, en donde un automóvil negro, digno de cualquier agente especial lo transportará al emblemático Blackstone Chicago Hotel,
+            el cual ha hospedado a 12 presidentes de Estados Unidos y al afamado enemigo púplico #1 Al Capone.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row tile-section align-items-stretch">
+    <div class="col-12 col-md-6 col-lg-4 text-left tile p-0" style="background-image: url('/assets/img/backgrounds/bg_menu.png')">
+      <div class="tile-content tile-gradient d-flex justify-content-center align-items-center">
+        <p class="tile-title m-0 font-volte-bold text-white text-uppercase">Comenzarás tu entenamiento en la emblematica ciudad de chicago</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 text-left tile p-0" style="background-image: url('/assets/img/backgrounds/bg_menu.png')"></div>
+    <div class="col-12 col-lg-4 text-left tile p-0" style="background-image: url('/assets/img/backgrounds/bg_menu.png')"></div>
   </div>
 </div>
