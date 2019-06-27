@@ -104,30 +104,6 @@
   background-position: center;
 }
 
-@media screen and (max-width: 575.98px) {
-  .container-fluid {
-    background-size: 180% auto;
-  }
-  .landing-main {
-    .floating-agent {
-      top: 25%;
-      width: 40%;
-      left: -10%;
-    }
-    .landing-logo {
-      max-width: 200px;
-    }
-  }
-  .bg-fingerprints {
-    background:
-      url("/assets/img/fingerprint1.png") no-repeat -115px 10px,
-      url("/assets/img/fingerprint2.png") no-repeat calc(100% + 115px) 80px;
-    background-size:
-      auto 80%,
-      auto 75%;
-  }
-}
-
 .divider-section {
   height: 300px;
   overflow: hidden;
@@ -171,6 +147,29 @@
   }
 }
 
+.instructions-section {
+  background:
+    url("/assets/img/fingerprint1.png") no-repeat -90px 50%,
+    url("/assets/img/circle1.png") no-repeat calc(100% + 300px) 35px;
+  background-size:
+    auto 150px,
+    auto 75%;
+  overflow: hidden;
+  .instructions-heading {
+    font-size: 24px;
+    line-height: 0.95;
+  }
+  .instruction-number {
+    font-size: 70px;
+    font-family: 'Volte Bold', sans-serif;
+  }
+  .instruction-text {
+    font-size: 16px;
+    line-height: 0.95;
+    max-width: calc(100% - 80px);
+  }
+}
+
 @media (min-width: 768px) {
   .landing-text {
     font-size: 32px;
@@ -182,10 +181,11 @@
       line-height: 0.95;
     }
     .section-heading {
-      font-size: 32px;
+      font-size: 34px;
     }
     .section-text {
       font-size: 24px;
+      max-width: 100%;
     }
   }
   #section-1, #section-3, #section-4 {
@@ -239,5 +239,55 @@
   .background-section {
     background-position: center;
   }
+  .instructions-section {
+    padding-bottom: 260px;
+    background:
+      url("/assets/img/fingerprint1.png") no-repeat -180px 30px,
+      url("/assets/img/circle1.png") no-repeat calc(100% + 720px) -120px;
+    background-size:
+      auto 35%,
+      auto 100%;
+    .instructions-heading {
+      font-size: 55px;
+    }
+    .instruction-number {
+      font-size: 80px;
+    }
+    .instruction-text {
+      font-size: 32px;
+      max-width: 100%;
+    }
+  }
+}
 
+@media (min-width: 1300px) {
+  .instructions-section {
+    .instructions-heading {
+      font-size: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .container-fluid {
+    background-size: 180% auto;
+  }
+  .landing-main {
+    .floating-agent {
+      top: 25%;
+      width: 40%;
+      left: -10%;
+    }
+    .landing-logo {
+      max-width: 200px;
+    }
+  }
+  .bg-fingerprints {
+    background:
+      url("/assets/img/fingerprint1.png") no-repeat -115px 10px,
+      url("/assets/img/fingerprint2.png") no-repeat calc(100% + 115px) 80px;
+    background-size:
+      auto 80%,
+      auto 75%;
+  }
 }

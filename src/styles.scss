@@ -86,3 +86,16 @@
 .text-pink {
   color: #E92945;
 }
+
+.subtle-link {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: left;
+  &:hover {
+    color: #F43F3F;
+  }
+  &:active {
+    color: #E92945;
+  }
+}
