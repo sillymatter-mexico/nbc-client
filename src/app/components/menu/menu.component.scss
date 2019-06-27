@@ -8,6 +8,10 @@
   top: 0;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0, 0.8);
+  background-image: url("/assets/img/backgrounds/bg_menu.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   overflow-x: hidden;
   transition: 0.5s;
   &.expanded {
@@ -50,10 +54,11 @@
       position: absolute;
       left: calc(50% - 125px);
       width: 250px;
-      background: -moz-linear-gradient(left,  rgba(199,22,81,1) 0%, rgba(240,90,38,1) 100%);
-      background: -webkit-linear-gradient(left,  rgba(199,22,81,1) 0%,rgba(240,90,38,1) 100%);
-      background: linear-gradient(to right,  rgba(199,22,81,1) 0%,rgba(240,90,38,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c71651', endColorstr='#f05a26',GradientType=1 );
+      background: rgb(199,22,82);
+      background: -moz-linear-gradient(left, rgba(199,22,82,1) 0%, rgba(238,38,63,1) 46%, rgba(239,94,36,1) 100%);
+      background: -webkit-linear-gradient(left, rgba(199,22,82,1) 0%,rgba(238,38,63,1) 46%,rgba(239,94,36,1) 100%);
+      background: linear-gradient(to right, rgba(199,22,82,1) 0%,rgba(238,38,63,1) 46%,rgba(239,94,36,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c71652', endColorstr='#ef5e24',GradientType=1 );
       opacity: 0;
       height: 3px;
       z-index: 1091;
