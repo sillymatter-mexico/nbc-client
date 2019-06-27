@@ -1,0 +1,293 @@
+.container-fluid {
+  min-height: 150vh;
+  background: black url("/assets/img/backgrounds/bg_landing.png") center no-repeat;
+  background-size: contain;
+  background-position-y: top;
+}
+
+.landing-main {
+  position: relative;
+  z-index: 0;
+  .floating-agent {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 25%;
+    z-index: -1;
+  }
+  .landing-logo {
+    position: relative;
+    max-width: 500px;
+    z-index: 2;
+  }
+  .landing-text {
+    z-index: 2;
+  }
+  .landing-button {
+    position: relative;
+    padding: 12px 32px;
+    max-width: 300px;
+  }
+}
+
+
+.landing-section {
+  padding-top: 100px;
+  .section-number {
+    font-size: 70px;
+  }
+  .section-heading {
+    font-size: 18px;
+  }
+  .section-text {
+    font-size: 14px;
+    line-height: 0.95;
+  }
+}
+
+.bg-map {
+  background: url("/assets/img/backgrounds/map.png") no-repeat;
+  background-size: cover;
+}
+
+.bg-map-clean {
+  background: url("/assets/img/map.png") no-repeat;
+  background-size: cover;
+}
+
+.tile-section {
+  .tile {
+    min-height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .tile-content {
+      width: 100%;
+      height: 100%;
+    }
+    .tile-gradient {
+      background: rgb(199,22,82);
+      background: -moz-linear-gradient(left, rgba(199,22,82,0.8) 0%, rgba(238,38,63,0.8) 46%, rgba(239,94,36,0.8) 100%);
+      background: -webkit-linear-gradient(left, rgba(199,22,82,0.8) 0%,rgba(238,38,63,0.8) 46%,rgba(239,94,36,0.8) 100%);
+      background: linear-gradient(to right, rgba(199,22,82,0.8) 0%,rgba(238,38,63,0.8) 46%,rgba(239,94,36,0.8) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c71652', endColorstr='#ef5e24',GradientType=1 );
+    }
+  }
+  .tile-title {
+    font-size: 20px;
+    line-height: 0.9;
+    display: inline-block;
+    max-width: 80%;
+  }
+}
+
+#section-1 {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-fingerprints {
+  background:
+    url("/assets/img/fingerprint1.png") no-repeat -90px 50px,
+    url("/assets/img/fingerprint2.png") no-repeat calc(100% + 90px) 35px;
+  background-size:
+    auto 80%,
+    auto 75%;
+}
+
+.background-section {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.divider-section {
+  height: 300px;
+  overflow: hidden;
+  .divider-content {
+    position: relative;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: calc(50% - 35px);
+      background: #F43F3F;
+      opacity: 0.6;
+      height: 1px;
+      z-index: 2;
+    }
+    &:before {
+      bottom: 50%;
+      left: 0;
+    }
+    &:after {
+      bottom: 50%;
+      right: 0;
+    }
+  }
+  .crosshair {
+    width: 50px;
+    height: auto;
+  }
+  .binoculars, .hat {
+    width: 250px;
+    height: auto;
+    position: absolute;
+    z-index: 3;
+  }
+  .binoculars {
+    left: -50px;
+    top: -30px;
+  }
+  .hat {
+    right: -80px;
+    top: -60px;
+  }
+}
+
+.instructions-section {
+  background:
+    url("/assets/img/fingerprint1.png") no-repeat -90px 50%,
+    url("/assets/img/circle1.png") no-repeat calc(100% + 300px) 35px;
+  background-size:
+    auto 150px,
+    auto 75%;
+  overflow: hidden;
+  .instructions-heading {
+    font-size: 24px;
+    line-height: 0.95;
+  }
+  .instruction-number {
+    font-size: 70px;
+    font-family: 'Volte Bold', sans-serif;
+  }
+  .instruction-text {
+    font-size: 16px;
+    line-height: 0.95;
+    max-width: calc(100% - 80px);
+  }
+}
+
+@media (min-width: 768px) {
+  .landing-text {
+    font-size: 32px;
+  }
+  .landing-section {
+    padding-top: 260px;
+    .section-number {
+      font-size: 120px;
+      line-height: 0.95;
+    }
+    .section-heading {
+      font-size: 34px;
+    }
+    .section-text {
+      font-size: 24px;
+      max-width: 100%;
+    }
+  }
+  #section-1, #section-3, #section-4 {
+    min-height: 800px;
+    padding-bottom: 150px!important;
+  }
+  .tile-section {
+    .tile {
+      min-height: 600px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .tile-title {
+      font-size: 40px;
+    }
+  }
+  .bg-fingerprints {
+    background:
+      url("/assets/img/fingerprint1.png") no-repeat -180px 50px,
+      url("/assets/img/fingerprint2.png") no-repeat calc(100% + 180px) 35px;
+    background-size:
+      auto 80%,
+      auto 75%;
+  }
+  .divider-section {
+    .divider-content {
+      &:before, &:after {
+        width: calc(50% - 135px);
+      }
+      &:before {
+        bottom: 50%;
+        left: 100px;
+      }
+      &:after {
+        bottom: 50%;
+        right: 100px;
+      }
+    }
+    .binoculars, .hat {
+      width: 250px;
+    }
+    .binoculars {
+      left: 15%;
+      top: -50px;
+    }
+    .hat {
+      right: 15%;
+      top: -90px;
+    }
+  }
+  .background-section {
+    background-position: center;
+  }
+  .instructions-section {
+    padding-bottom: 260px;
+    background:
+      url("/assets/img/fingerprint1.png") no-repeat -180px 30px,
+      url("/assets/img/circle1.png") no-repeat calc(100% + 720px) -120px;
+    background-size:
+      auto 35%,
+      auto 100%;
+    .instructions-heading {
+      font-size: 55px;
+    }
+    .instruction-number {
+      font-size: 80px;
+    }
+    .instruction-text {
+      font-size: 32px;
+      max-width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .instructions-section {
+    .instructions-heading {
+      font-size: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .container-fluid {
+    background-size: 180% auto;
+  }
+  .landing-main {
+    .floating-agent {
+      top: 25%;
+      width: 40%;
+      left: -10%;
+    }
+    .landing-logo {
+      max-width: 200px;
+    }
+  }
+  .bg-fingerprints {
+    background:
+      url("/assets/img/fingerprint1.png") no-repeat -115px 10px,
+      url("/assets/img/fingerprint2.png") no-repeat calc(100% + 115px) 80px;
+    background-size:
+      auto 80%,
+      auto 75%;
+  }
+}

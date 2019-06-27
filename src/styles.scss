@@ -1,1 +1,101 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'fonts';
+
+.bg-transparent {
+  background: transparent!important;
+}
+
+.app-btn {
+  border-radius: 30px;
+  color: white;
+  padding: 8px 36px 6px;
+  border: 1px solid transparent;
+  outline: 0 none;
+  font-family: 'Volte Regular', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.94px;
+  font-size: 16px;
+  transition: 0.5s;
+  cursor: pointer;
+  display: inline-block;
+  background: rgb(199,22,82);
+  background: -moz-linear-gradient(left, rgba(199,22,82,1) 0%, rgba(238,38,63,1) 46%, rgba(239,94,36,1) 100%);
+  background: -webkit-linear-gradient(left, rgba(199,22,82,1) 0%,rgba(238,38,63,1) 46%,rgba(239,94,36,1) 100%);
+  background: linear-gradient(to right, rgba(199,22,82,1) 0%,rgba(238,38,63,1) 46%,rgba(239,94,36,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c71652', endColorstr='#ef5e24',GradientType=1 );
+  background-size: 200%;
+  background-position-x: -1px;
+  &:hover {
+    background-position-x: 50%;
+    border: 1px solid transparent;
+  }
+  &:active {
+    outline: 0 none;
+    background-position-x: 90%;
+  }
+  &:focus {
+    outline: 0 none;
+  }
+}
+
+.align-vertical-middle {
+  * {
+    vertical-align: middle;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.font-volte-regular {
+  font-family: 'Volte Regular', sans-serif;
+  line-height: 0.95;
+}
+
+.font-volte-semibold {
+  font-family: 'Volte Semibold', sans-serif;
+}
+
+.font-volte-bold {
+  font-family: 'Volte Bold', sans-serif;
+}
+
+.font-cg-regular {
+  font-family: 'Century Gothic Regular', sans-serif;
+}
+
+.font-cg-bold {
+  font-family: 'Century Gothic Bold', sans-serif;
+}
+
+.font-montserrat-regular {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.font-montserrat-semibold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.font-montserrat-bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+.text-pink {
+  color: #E92945;
+}
+
+.subtle-link {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: left;
+  &:hover {
+    color: #F43F3F;
+  }
+  &:active {
+    color: #E92945;
+  }
+}

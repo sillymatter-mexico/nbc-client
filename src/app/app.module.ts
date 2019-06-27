@@ -7,10 +7,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {IconsModule} from './icons/icons.module';
+import { LandingComponent } from './pages/landing/landing.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { MenuComponent } from './components/menu/menu.component';
+import {CollapseModule} from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LandingComponent,
+    NavbarComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +26,8 @@ import {IconsModule} from './icons/icons.module';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    IconsModule
+    IconsModule,
+    CollapseModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
