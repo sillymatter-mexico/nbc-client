@@ -17,11 +17,11 @@
   transition: 0.5s;
   cursor: pointer;
   display: inline-block;
-  background: rgb(199,22,81);
-  background: -moz-linear-gradient(left, rgba(199,22,81,1) 0%, rgba(240,90,38,1) 50%, rgba(244,194,29,1) 100%);
-  background: -webkit-linear-gradient(left, rgba(199,22,81,1) 0%,rgba(240,90,38,1) 50%,rgba(244,194,29,1) 100%);
-  background: linear-gradient(to right, rgba(199,22,81,1) 0%,rgba(240,90,38,1) 50%,rgba(244,194,29,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c71651', endColorstr='#f4c21d',GradientType=1 );
+  background: rgb(199,22,82);
+  background: -moz-linear-gradient(left, rgba(199,22,82,1) 0%, rgba(238,38,63,1) 46%, rgba(239,94,36,1) 100%);
+  background: -webkit-linear-gradient(left, rgba(199,22,82,1) 0%,rgba(238,38,63,1) 46%,rgba(239,94,36,1) 100%);
+  background: linear-gradient(to right, rgba(199,22,82,1) 0%,rgba(238,38,63,1) 46%,rgba(239,94,36,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c71652', endColorstr='#ef5e24',GradientType=1 );
   background-size: 200%;
   background-position-x: -1px;
   &:hover {

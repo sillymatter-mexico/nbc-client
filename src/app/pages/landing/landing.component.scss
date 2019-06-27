@@ -5,24 +5,43 @@
   background-position-y: top;
 }
 
-.landing-logo {
-  max-width: 500px;
+.landing-main {
+  position: relative;
+  z-index: 0;
+  .floating-agent {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 25%;
+    z-index: -1;
+  }
+  .landing-logo {
+    position: relative;
+    max-width: 500px;
+    z-index: 2;
+  }
+  .landing-text {
+    z-index: 2;
+  }
+  .landing-button {
+    position: relative;
+    padding: 12px 32px;
+    max-width: 300px;
+  }
 }
 
-.landing-button {
-  padding: 12px 32px;
-  max-width: 300px;
-}
+
 .landing-section {
   padding-top: 100px;
   .section-number {
-    font-size: 60px;
+    font-size: 70px;
   }
   .section-heading {
     font-size: 18px;
   }
   .section-text {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 0.95;
   }
 }
 
@@ -31,20 +50,27 @@
   background-size: cover;
 }
 
+.bg-map-clean {
+  background: url("/assets/img/map.png") no-repeat;
+  background-size: cover;
+}
+
 .tile-section {
   .tile {
     min-height: 200px;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     .tile-content {
       width: 100%;
       height: 100%;
     }
     .tile-gradient {
-      background: -moz-linear-gradient(left,  rgba(199,22,81,0.8) 0%, rgba(240,90,38,0.8) 100%);
-      background: -webkit-linear-gradient(left,  rgba(199,22,81,0.8) 0%,rgba(240,90,38,0.8) 100%);
-      background: linear-gradient(to right,  rgba(199,22,81,0.8) 0%,rgba(240,90,38,0.8) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c71651', endColorstr='#f05a26',GradientType=1 );
+      background: rgb(199,22,82);
+      background: -moz-linear-gradient(left, rgba(199,22,82,0.8) 0%, rgba(238,38,63,0.8) 46%, rgba(239,94,36,0.8) 100%);
+      background: -webkit-linear-gradient(left, rgba(199,22,82,0.8) 0%,rgba(238,38,63,0.8) 46%,rgba(239,94,36,0.8) 100%);
+      background: linear-gradient(to right, rgba(199,22,82,0.8) 0%,rgba(238,38,63,0.8) 46%,rgba(239,94,36,0.8) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c71652', endColorstr='#ef5e24',GradientType=1 );
     }
   }
   .tile-title {
@@ -55,11 +81,94 @@
   }
 }
 
+#section-1 {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-fingerprints {
+  background:
+    url("/assets/img/fingerprint1.png") no-repeat -90px 50px,
+    url("/assets/img/fingerprint2.png") no-repeat calc(100% + 90px) 35px;
+  background-size:
+    auto 80%,
+    auto 75%;
+}
+
+.background-section {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 @media screen and (max-width: 575.98px) {
   .container-fluid {
     background-size: 180% auto;
   }
+  .landing-main {
+    .floating-agent {
+      top: 25%;
+      width: 40%;
+      left: -10%;
+    }
+    .landing-logo {
+      max-width: 200px;
+    }
+  }
+  .bg-fingerprints {
+    background:
+      url("/assets/img/fingerprint1.png") no-repeat -115px 10px,
+      url("/assets/img/fingerprint2.png") no-repeat calc(100% + 115px) 80px;
+    background-size:
+      auto 80%,
+      auto 75%;
+  }
+}
 
+.divider-section {
+  height: 300px;
+  overflow: hidden;
+  .divider-content {
+    position: relative;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: calc(50% - 35px);
+      background: #F43F3F;
+      opacity: 0.6;
+      height: 1px;
+      z-index: 2;
+    }
+    &:before {
+      bottom: 50%;
+      left: 0;
+    }
+    &:after {
+      bottom: 50%;
+      right: 0;
+    }
+  }
+  .crosshair {
+    width: 50px;
+    height: auto;
+  }
+  .binoculars, .hat {
+    width: 250px;
+    height: auto;
+    position: absolute;
+    z-index: 3;
+  }
+  .binoculars {
+    left: -50px;
+    top: -30px;
+  }
+  .hat {
+    right: -80px;
+    top: -60px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -79,13 +188,13 @@
       font-size: 24px;
     }
   }
-  #section-1 {
+  #section-1, #section-3, #section-4 {
     min-height: 800px;
     padding-bottom: 150px!important;
   }
   .tile-section {
     .tile {
-      min-height: 400px;
+      min-height: 600px;
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -93,4 +202,42 @@
       font-size: 40px;
     }
   }
+  .bg-fingerprints {
+    background:
+      url("/assets/img/fingerprint1.png") no-repeat -180px 50px,
+      url("/assets/img/fingerprint2.png") no-repeat calc(100% + 180px) 35px;
+    background-size:
+      auto 80%,
+      auto 75%;
+  }
+  .divider-section {
+    .divider-content {
+      &:before, &:after {
+        width: calc(50% - 135px);
+      }
+      &:before {
+        bottom: 50%;
+        left: 100px;
+      }
+      &:after {
+        bottom: 50%;
+        right: 100px;
+      }
+    }
+    .binoculars, .hat {
+      width: 250px;
+    }
+    .binoculars {
+      left: 15%;
+      top: -50px;
+    }
+    .hat {
+      right: 15%;
+      top: -90px;
+    }
+  }
+  .background-section {
+    background-position: center;
+  }
+
 }

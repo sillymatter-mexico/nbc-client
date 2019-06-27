@@ -12,7 +12,8 @@ export class LandingComponent implements OnInit {
   ngOnInit() {
   }
 
-  scrollTo(start: HTMLDivElement) {
-    start.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+  scrollTo(element: any) {
+    console.log(element);
+    element.scrollIntoView({behavior: 'smooth', block: 'start'});
   }
 }
