@@ -11,13 +11,15 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MenuComponent } from './components/menu/menu.component';
 import {CollapseModule} from 'ngx-bootstrap';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     NavbarComponent,
-    MenuComponent
+    MenuComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
