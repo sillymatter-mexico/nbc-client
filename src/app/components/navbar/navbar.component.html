@@ -7,7 +7,8 @@
       <img src="/assets/img/logos/logo_club.png" alt="" class="img-fluid navbar-logo logo-club">
     </div>
     <div class="col-12 col-sm-6 col-md-auto col-lg-4 text-center text-md-right align-vertical-middle">
-      <button class="app-btn navbar-button text-uppercase mt-2">
+      <button class="app-btn navbar-button text-uppercase mt-2"
+              routerLink="/registro" *ngIf="!hideSignIn">
         Registrarme
       </button>
       <i-feather name="menu" id="navbar-menu" (click)="toggleMenu()"
