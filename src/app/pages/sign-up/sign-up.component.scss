@@ -4,3 +4,53 @@
   background-size: contain;
   background-position-y: top;
 }
+
+.sign-up-title {
+  font-size: 80px;
+}
+
+.sign-up-box {
+  border-radius: 16px;
+  background-color: #F3F3F3;
+  box-shadow: 0 2px 221px 0 rgba(0,0,0,0.5);
+  width: 75%;
+  display: inline-block;
+  .sign-up-logo {
+    max-height: 50px;
+    width: auto;
+  }
+  .sign-up-text {
+    font-family: 'Volte Regular', sans-serif;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+  }
+  .sign-up-checkbox {
+    color: #A7A7A7!important;
+    letter-spacing: 2.06px!important;
+  }
+  .custom-control-label:before{
+    background-color: #D8D8D8;
+  }
+  .custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+    background-color: #E92945;
+  }
+
+  .custom-control-input:focus~.custom-control-label::before {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(199,22,82,.25);
+  }
+
+  .custom-control-input:active~.custom-control-label::before {
+    color: #fff;
+    background-color: #fcbaba;
+  }
+
+ .sign-up-button {
+   width: 100%;
+   max-width: 300px;
+   padding: 14px 32px;
+ }
+
+  .register-button {
+    padding: 14px 16px;
+  }
+}

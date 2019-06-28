@@ -26,12 +26,13 @@ body {
   cursor: pointer;
   display: inline-block;
   background: rgb(199,22,82);
-  background: -moz-linear-gradient(left, rgba(199,22,82,1) 0%, rgba(238,38,63,1) 46%, rgba(239,94,36,1) 100%);
-  background: -webkit-linear-gradient(left, rgba(199,22,82,1) 0%,rgba(238,38,63,1) 46%,rgba(239,94,36,1) 100%);
-  background: linear-gradient(to right, rgba(199,22,82,1) 0%,rgba(238,38,63,1) 46%,rgba(239,94,36,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c71652', endColorstr='#ef5e24',GradientType=1 );
+  background: -moz-linear-gradient(left, rgba(199,22,82,1) 0%, rgba(238,38,63,1) 23%, rgba(239,94,36,1) 50%, rgba(239,94,36,1) 73%, rgba(238,38,63,1) 100%);
+  background: -webkit-linear-gradient(left, rgba(199,22,82,1) 0%,rgba(238,38,63,1) 23%,rgba(239,94,36,1) 50%,rgba(239,94,36,1) 73%,rgba(238,38,63,1) 100%);
+  background: linear-gradient(to right, rgba(199,22,82,1) 0%,rgba(238,38,63,1) 23%,rgba(239,94,36,1) 50%,rgba(239,94,36,1) 73%,rgba(238,38,63,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c71652', endColorstr='#c71652',GradientType=1 );
   background-size: 200%;
   background-position-x: -1px;
+  box-shadow: 0 3px 9px 0 rgba(0,0,0,0.41);
   &:hover {
     background-position-x: 50%;
     border: 1px solid transparent;
@@ -42,6 +43,26 @@ body {
   }
   &:focus {
     outline: 0 none;
+  }
+  &.outline-btn {
+    position: relative;
+    box-shadow: none;
+    &:before {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      top: 2px;
+      left: 2px;
+      background-color: #F3F3F3;
+      border-radius: 30px;
+    }
+    span {
+      z-index: 3;
+      position: relative;
+      color: #343434;
+    }
   }
 }
 
@@ -107,3 +128,28 @@ body {
     color: #E92945;
   }
 }
+
+::placeholder {
+  color: red;
+  opacity: 1;
+}
+
+.app-input {
+  padding: 18px 14px;
+  border-radius: 4px;
+  border: 0 none;
+  letter-spacing: 2.06px;
+  font-family: 'Volte Regular', sans-serif;
+  font-size: 18px;
+  &:focus {
+    border-color: #E92945;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(199,22,82,.25);
+  }
+}
+
+.form-control::-webkit-input-placeholder { color: #CFCFCF; }
+.form-control:-moz-placeholder { color: #CFCFCF; }
+.form-control::-moz-placeholder { color: #CFCFCF;}
+.form-control:-ms-input-placeholder { color: #CFCFCF; }
+.form-control::-ms-input-placeholder { color: #CFCFCF; }
