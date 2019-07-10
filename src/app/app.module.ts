@@ -12,6 +12,19 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MenuComponent } from './components/menu/menu.component';
 import {CollapseModule} from 'ngx-bootstrap';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import {GamePageComponent} from './pages/game-page/game-page.component';
+import { SliderComponent } from './components/slider/slider.component';
+import {SWIPER_CONFIG, SwiperConfigInterface, SwiperModule} from 'ngx-swiper-wrapper';
+
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+  observer: true,
+  direction: 'vertical',
+  threshold: 50,
+  effect: 'fade',
+  spaceBetween: 0,
+  slidesPerView: 1,
+  centeredSlides: true
+};
 
 @NgModule({
   declarations: [
@@ -19,8 +32,12 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
     LandingComponent,
     NavbarComponent,
     MenuComponent,
-    SignUpComponent
-  ],
+    SignUpComponent,
+    SignUpComponent,
+    GamePageComponent,
+    SliderComponent
+
+],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,9 +46,15 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
     FormsModule,
     ReactiveFormsModule,
     IconsModule,
+    SwiperModule,
     CollapseModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: SWIPER_CONFIG,
+      useValue: DEFAULT_SWIPER_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

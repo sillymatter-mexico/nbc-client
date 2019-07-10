@@ -44,7 +44,7 @@ body {
   &:focus {
     outline: 0 none;
   }
-  &.outline-btn {
+  &.outline-btn-gradient {
     position: relative;
     box-shadow: none;
     &:before {
@@ -64,6 +64,27 @@ body {
       color: #343434;
     }
   }
+  &.outline-btn-light {
+    background: transparent;
+    border: 2px solid white;
+    box-shadow: none;
+    letter-spacing: 3.05px;
+    &:hover {
+      background: white;
+      color: #EF5E24;
+    }
+  }
+  &.outline-btn-dark {
+    background: transparent;
+    border: 2px solid black;
+    box-shadow: none;
+    letter-spacing: 3.05px;
+    color: black;
+    &:hover {
+      background: black;
+      color: #F3F3F3;
+    }
+  }
 }
 
 .align-vertical-middle {
@@ -74,42 +95,6 @@ body {
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.font-volte-regular {
-  font-family: 'Volte Regular', sans-serif;
-  line-height: 0.95;
-}
-
-.font-volte-semibold {
-  font-family: 'Volte Semibold', sans-serif;
-}
-
-.font-volte-bold {
-  font-family: 'Volte Bold', sans-serif;
-}
-
-.font-cg-regular {
-  font-family: 'Century Gothic Regular', sans-serif;
-}
-
-.font-cg-bold {
-  font-family: 'Century Gothic Bold', sans-serif;
-}
-
-.font-montserrat-regular {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-}
-
-.font-montserrat-semibold {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-}
-
-.font-montserrat-bold {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
 }
 
 .text-pink {
@@ -153,3 +138,38 @@ body {
 .form-control::-moz-placeholder { color: #CFCFCF;}
 .form-control:-ms-input-placeholder { color: #CFCFCF; }
 .form-control::-ms-input-placeholder { color: #CFCFCF; }
+
+.swiper-container-vertical>.swiper-pagination-bullets {
+  left: 10px!important;
+  right: auto!important;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 100%;
+  background: white;
+  opacity: 1!important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #DD3431!important;
+}
+
+.swiper-slide {
+  height: auto!important;
+}
+
+swiper > .swiper.s-wrapper .swiper-pagination .swiper-pagination-handle .swiper-pagination-bullet.swiper-pagination-bullet-last,
+swiper > .swiper.s-wrapper .swiper-pagination .swiper-pagination-handle .swiper-pagination-bullet.swiper-pagination-bullet-first {
+  border: 0 none!important;
+}
+
+@media (max-width: 767.98px) {
+  .swiper-container-vertical > .swiper-pagination-bullets {
+    top: 85px!important;
+    left: 0!important;
+  }
+}
