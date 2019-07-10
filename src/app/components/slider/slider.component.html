@@ -1,9 +1,15 @@
 <div class="row">
   <div class="col-12 p-0 slider">
-    <swiper [config]="config" [(index)]="slideIndex" class="swiper-container">
-      <div class="swiper-slide register-slide">
-        <app-sign-up [hideNav]="true"></app-sign-up>
+    <div class="swiper-container" (mouseenter)="stopAutoplay()" (mouseleave)="startAutoplay()">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide register-slide">
+          <app-sign-up [hideNav]="true"></app-sign-up>
+        </div>
+        <div class="swiper-slide">
+          <app-sign-up [hideNav]="true"></app-sign-up>
+        </div>
       </div>
-    </swiper>
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
 </div>

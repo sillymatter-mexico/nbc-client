@@ -14,17 +14,6 @@ import {CollapseModule} from 'ngx-bootstrap';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import {GamePageComponent} from './pages/game-page/game-page.component';
 import { SliderComponent } from './components/slider/slider.component';
-import {SWIPER_CONFIG, SwiperConfigInterface, SwiperModule} from 'ngx-swiper-wrapper';
-
-const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
-  observer: true,
-  direction: 'vertical',
-  threshold: 50,
-  effect: 'fade',
-  spaceBetween: 0,
-  slidesPerView: 1,
-  centeredSlides: true
-};
 
 @NgModule({
   declarations: [
@@ -46,14 +35,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     FormsModule,
     ReactiveFormsModule,
     IconsModule,
-    SwiperModule,
     CollapseModule.forRoot(),
-  ],
-  providers: [
-    {
-      provide: SWIPER_CONFIG,
-      useValue: DEFAULT_SWIPER_CONFIG
-    }
   ],
   bootstrap: [AppComponent]
 })

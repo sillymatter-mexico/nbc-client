@@ -1,4 +1,5 @@
 @import 'fonts';
+@import '~swiper/dist/css/swiper.min.css';
 
 body {
   -webkit-touch-callout: none;
@@ -139,11 +140,6 @@ body {
 .form-control:-ms-input-placeholder { color: #CFCFCF; }
 .form-control::-ms-input-placeholder { color: #CFCFCF; }
 
-.swiper-container-vertical>.swiper-pagination-bullets {
-  left: 10px!important;
-  right: auto!important;
-}
-
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
@@ -162,14 +158,11 @@ body {
   height: auto!important;
 }
 
-swiper > .swiper.s-wrapper .swiper-pagination .swiper-pagination-handle .swiper-pagination-bullet.swiper-pagination-bullet-last,
-swiper > .swiper.s-wrapper .swiper-pagination .swiper-pagination-handle .swiper-pagination-bullet.swiper-pagination-bullet-first {
+.swiper-pagination-bullet.swiper-pagination-bullet-last,
+.swiper-pagination-bullet.swiper-pagination-bullet-first {
   border: 0 none!important;
 }
 
 @media (max-width: 767.98px) {
-  .swiper-container-vertical > .swiper-pagination-bullets {
-    top: 85px!important;
-    left: 0!important;
-  }
+
 }
