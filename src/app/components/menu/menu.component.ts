@@ -15,7 +15,6 @@ export class MenuComponent implements OnInit {
     this.menuService.isExpanded
       .subscribe((expanded: boolean) => {
         this.expanded = expanded;
-        console.log('menu toggled in component', this.expanded);
       });
   }
 

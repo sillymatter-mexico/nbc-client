@@ -1,13 +1,15 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import Swiper from 'swiper';
 import {SliderService} from '../../services/slider.service';
+import {ActivatedRoute, Router} from '@angular/router';
+import {Observable, Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss']
 })
-export class LandingComponent implements OnInit, AfterViewInit {
+export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public config = {
     keyboard: false,
@@ -32,8 +34,13 @@ export class LandingComponent implements OnInit, AfterViewInit {
   };
   public chicagoSlider: any;
   public florenciaSlider: any;
+  private routeSubscription: Subscription;
 
-  constructor(private sliderService: SliderService) {}
+  constructor(private sliderService: SliderService,
+              private route: ActivatedRoute,
+              private router: Router) {
+
+  }
 
   ngOnInit() {
   }
@@ -41,10 +48,19 @@ export class LandingComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.chicagoSlider = new Swiper('.chicago-slider', this.config);
     this.florenciaSlider = new Swiper('.florencia-slider', this.config);
+    this.routeSubscription = this.route.fragment.subscribe((fragment: string) => {
+      if (fragment === 'registro') {
+        this.sliderService.changeSlide(0);
+        this.router.navigate([]);
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    this.routeSubscription.unsubscribe();
   }
 
   goToRegister(element: any) {
-    console.log(element);
     element.scrollIntoView({behavior: 'smooth', block: 'start'});
     this.sliderService.changeSlide(0);
   }

@@ -17,6 +17,5 @@ export class MenuService {
   public toggleMenu() {
     this.expanded = !this.expanded;
     this.isExpanded.next(this.expanded);
-    console.log('menu toggled', this.expanded);
   }
 }
