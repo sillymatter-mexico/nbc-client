@@ -53,6 +53,10 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
         this.sliderService.changeSlide(0);
         this.router.navigate([]);
       }
+      if (fragment === 'inicio') {
+        this.sliderService.changeSlide(1);
+        this.router.navigate([]);
+      }
     });
   }
 

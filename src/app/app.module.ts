@@ -14,6 +14,7 @@ import {CollapseModule} from 'ngx-bootstrap';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import {GamePageComponent} from './pages/game-page/game-page.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SliderComponent } from './components/slider/slider.component';
     SignUpComponent,
     SignUpComponent,
     GamePageComponent,
-    SliderComponent
+    SliderComponent,
+    FooterComponent
 
 ],
   imports: [
