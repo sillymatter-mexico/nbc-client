@@ -14,9 +14,10 @@
 }
 
 .sign-up-title {
-  font-size: 18px;
+  font-size: 16px;
   h1 {
-    font-size: 48px;
+    font-size: 46px;
+    background: #C71652;
     background: -moz-linear-gradient(270deg, #EF5E24 0%, #EE263F 54.2%, #C71652 100%);
     background: -webkit-linear-gradient(270deg, #EF5E24 0%, #EE263F 54.2%, #C71652 100%);
     background: linear-gradient(270deg, #EF5E24 0%, #EE263F 54.2%, #C71652 100%);
@@ -26,7 +27,7 @@
   }
   .sign-up-subtitle {
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0.47px;
   }
 }
@@ -102,7 +103,7 @@
   .sign-up-title {
     font-size: 30px;
     h1 {
-      font-size: 72px;
+      font-size: 100px;
     }
     .sign-up-subtitle {
       font-size: 25px;

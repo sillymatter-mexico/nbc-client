@@ -1,6 +1,6 @@
-<div class="container-fluid px-3 py-3 sign-up-container d-flex align-content-center">
+<div class="container-fluid px-3 py-3 sign-up-container d-flex flex-column justify-content-center">
   <app-navbar [hideSignIn]="true" *ngIf="!hideNav"></app-navbar>
-  <div class="row sign-up-main align-items-center py-3">
+  <div class="row align-items-center py-3">
     <div class="col-12 col-lg-6 px-4 px-md-5 text-left sign-up-title">
       <p class="d-inline-block text-white font-unio-italic pl-lg-5 mb-1 mb-lg-3">Conviértete en el próximo</p>
       <h1 class="no-margin text-uppercase font-usans-heavy pl-lg-5">Agente Universal</h1>
@@ -39,11 +39,12 @@
           <p class="sign-up-text text-center">
             ¿Aún no eres socio <span class="font-volte-bold">Club Premier</span>? Registrate en el siguiente enlace
           </p>
-          <button class="app-btn my-3 register-button outline-btn-dark">
+          <a class="app-btn my-3 register-button outline-btn-dark" href="https://member.clubpremier.com/registro" target="_blank">
             <span class="text-uppercase font-volte-semibold">Quiero ser socio Club Premier</span>
-          </button>
+          </a>
         </div>
       </div>
+      <p class="mt-3 subtle-link text-center">Aviso de privacidad</p>
     </div>
   </div>
 </div>

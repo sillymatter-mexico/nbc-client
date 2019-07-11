@@ -1,8 +1,105 @@
 .slider {
-  min-height: calc(100vh - 102px);
-  .slide {
-    width: 100%;
+  min-height: calc(100vh - 75px);
+  background: linear-gradient(108.12deg, #2B8B78 0%, #190B33 100%) bottom right;
+  background-size: 220% 100%;
+  .swiper-container {
     height: 100%;
+    .swiper-slide {
+      height: auto;
+    }
   }
 }
 
+.main-slide {
+  min-height: calc(100vh - 75px);
+  background:
+    url("/assets/img/agent.png") -50% -20% no-repeat,
+    url("/assets/img/backgrounds/bg_slider_2.png") left bottom;
+  background-size:
+    auto 130%,
+    cover;
+}
+
+.travel-slide {
+  min-height: calc(100vh - 75px);
+  background:
+    url("/assets/img/map.png") no-repeat left 10%,
+    linear-gradient(108.12deg, #2B8B78 0%, #190B33 100%) bottom right;
+  background-size:
+    130% auto,
+    220% 100%;
+}
+
+.slide-subtitle {
+  font-size: 16px;
+}
+
+.slide-title {
+  font-size: 46px;
+  letter-spacing: 3px;
+  line-height: 1;
+}
+
+.slide-text {
+  font-size: 12px;
+  line-height: 1.4;
+  max-width: 80%;
+}
+
+.slide-footer {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.98px;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+@media (min-width: 576px) {
+  .slider {
+    min-height: calc(100vh - 102px);
+  }
+  .main-slide {
+    min-height: calc(100vh - 102px);
+    background:
+      url("/assets/img/agent.png") 80% -20% no-repeat,
+      url("/assets/img/backgrounds/bg_slider_2.png") bottom;
+    background-size:
+      auto 130%,
+      cover;
+
+  }
+
+  .travel-slide {
+    min-height: calc(100vh - 102px);
+    background:
+      url("/assets/img/map.png") no-repeat center top,
+      linear-gradient(108.12deg, #2B8B78 0%, #190B33 100%) bottom right;
+    background-size:
+      auto 100%,
+      220% 100%;
+  }
+
+  .slide-subtitle {
+    font-size: 30px;
+  }
+
+  .slide-title {
+    font-size: 100px;
+    letter-spacing: 5.63px;
+    line-height: 92px;
+  }
+
+  .slide-text {
+    font-size: 25px;
+    line-height: 36px;
+  }
+
+  .slide-footer {
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0.98px;
+    line-height: 23px;
+    opacity: 0.7;
+  }
+
+}

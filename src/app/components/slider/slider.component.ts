@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import Swiper from 'swiper';
+import {SliderService} from '../../services/slider.service';
 
 @Component({
   selector: 'app-slider',
@@ -8,13 +9,12 @@ import Swiper from 'swiper';
 })
 export class SliderComponent implements OnInit, AfterViewInit {
 
-  public slideIndex: number;
   public config = {
-    a11y: true,
     keyboard: false,
     mousewheel: false,
     scrollbar: false,
     navigation: false,
+    autoHeight: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true
@@ -23,25 +23,28 @@ export class SliderComponent implements OnInit, AfterViewInit {
     direction: 'horizontal',
     effect: 'slide',
     spaceBetween: 0,
+    initialSlide: 1,
     slidesPerView: 1,
     centeredSlides: true,
     loop: true,
     autoplay: {
       delay: 5000,
-      reverseDirection: true,
       disableOnInteraction: false
     },
   };
   public slider: any;
 
-  constructor() {
-    this.slideIndex = 0;
+  constructor(private sliderService: SliderService) {
+    this.sliderService.slideChanged
+      .subscribe((slide: number) => {
+        this.goToSlide(slide);
+      });
   }
 
   ngOnInit() {}
 
   ngAfterViewInit() {
-    this.slider = new Swiper('.swiper-container', this.config);
+    this.slider = new Swiper('.main-slider', this.config);
   }
 
   stopAutoplay() {
@@ -50,5 +53,9 @@ export class SliderComponent implements OnInit, AfterViewInit {
 
   startAutoplay() {
     this.slider.autoplay.start();
+  }
+
+  goToSlide(slide: number) {
+    this.slider.slideToLoop(slide, 500, false);
   }
 }
