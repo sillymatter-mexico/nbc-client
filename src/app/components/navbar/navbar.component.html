@@ -16,7 +16,8 @@
         Participa
       </button>
       <i-feather name="menu" id="navbar-menu" (click)="toggleMenu()"
-                 class="text-white ml-0 mt-2 mt-md-2 ml-sm-3 cursor-pointer">
+                 class="text-white ml-0 ml-sm-3 cursor-pointer"
+                 [ngClass]="hideSignIn ? 'mt-0 mt-md-3' : 'mt-2 mt-md-2'">
       </i-feather>
     </div>
   </div>

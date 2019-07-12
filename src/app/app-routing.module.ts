@@ -6,6 +6,7 @@ import {GamePageComponent} from './pages/game-page/game-page.component';
 import {RewardsComponent} from './pages/rewards/rewards.component';
 import {PrivacyComponent} from './pages/privacy/privacy.component';
 import {BasesComponent} from './pages/bases/bases.component';
+import {GameContainerComponent} from './pages/game-container/game-container.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'juego', component: GamePageComponent },
   { path: 'privacidad', component: PrivacyComponent },
   { path: 'bases', component: BasesComponent },
+  { path: 'juegos', component: GameContainerComponent },
 ];
 
 @NgModule({

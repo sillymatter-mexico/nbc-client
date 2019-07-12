@@ -1,0 +1,104 @@
+.games-container {
+  min-height: 100vh;
+  background: rgba(25,11,51,1);
+  background: -moz-linear-gradient(106.94deg, rgba(43,139,120,1) 0%, rgba(25,11,51,1) 100%);
+  background: -webkit-linear-gradient(106.94deg, rgba(43,139,120,1) 0%, rgba(25,11,51,1) 100%);
+  background: linear-gradient(106.94deg, rgba(43,139,120,1) 0%, rgba(25,11,51,1) 100%);
+  .game-container {
+    background-size: cover;
+    .game-logo {
+      width: 100%;
+      max-width: 500px;
+    }
+    .game-description {
+      font-size: 12px;
+    }
+  }
+  .game-counter {
+    width: 100%;
+    text-align: center;
+    color: white;
+    .counter-item {
+      display: inline-block;
+      text-transform: uppercase;
+      margin: 0 1.5rem;
+      opacity: 0.5;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        opacity: 1;
+      }
+      h2 {
+        font-family: 'Volte Bold', sans-serif;
+        display: inline-block;
+        font-size: 25px;
+      }
+      p {
+        font-family: 'Volte Regular', sans-serif;
+        display: inline-block;
+        font-size: 12px;
+      }
+      &.active-item {
+        opacity: 1;
+        h2 {
+          font-size: 25px;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .game-text-title {
+    min-height: 150px;
+    position: relative;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top: 10%;
+      right: -20%;
+      max-width: 800px;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .games-container {
+    .game-container {
+      .game-description {
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+    .game-counter {
+      .counter-item {
+        margin: 0 2rem;
+        h2 {
+          font-size: 26px;
+        }
+        p {
+          font-size: 15px;
+        }
+        &.active-item {
+          h2 {
+            font-size: 60px;
+            line-height: 46px;
+          }
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .game-text-title {
+      min-height: 200px;
+      img {
+        top: 50%;
+        right: 0;
+        max-width: 800px;
+        width: 100%;
+      }
+    }
+  }
+}

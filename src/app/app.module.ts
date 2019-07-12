@@ -20,6 +20,7 @@ import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { TextWallComponent } from './components/text-wall/text-wall.component';
 import {NgxMdModule} from 'ngx-md';
 import { BasesComponent } from './pages/bases/bases.component';
+import { GameContainerComponent } from './pages/game-container/game-container.component';
 
 @NgModule({
   declarations: [
@@ -35,17 +36,18 @@ import { BasesComponent } from './pages/bases/bases.component';
     RewardsComponent,
     PrivacyComponent,
     TextWallComponent,
-    BasesComponent
+    BasesComponent,
+    GameContainerComponent
 
 ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     IconsModule,
+    AppRoutingModule,
     CollapseModule.forRoot(),
     NgxMdModule.forRoot()
   ],
