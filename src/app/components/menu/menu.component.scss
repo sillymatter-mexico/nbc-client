@@ -109,6 +109,10 @@
         font-size: 16px;
       }
     }
+    .menu-agent {
+      left: calc(50% - 200px);
+      width: 800px;
+    }
     a {
       font-size: 24px;
       &:hover {

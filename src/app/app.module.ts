@@ -15,6 +15,7 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import {GamePageComponent} from './pages/game-page/game-page.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RewardsComponent } from './pages/rewards/rewards.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FooterComponent } from './components/footer/footer.component';
     SignUpComponent,
     GamePageComponent,
     SliderComponent,
-    FooterComponent
+    FooterComponent,
+    RewardsComponent
 
 ],
   imports: [

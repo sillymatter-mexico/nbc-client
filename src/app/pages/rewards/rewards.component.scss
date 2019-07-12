@@ -1,0 +1,260 @@
+.rewards-section {
+  background-image: url("/assets/img/backgrounds/bg_rewards.jpg");
+  background-size: cover;
+  background-position: right bottom;
+  .rewards-title {
+    font-size: 46px;
+  }
+  .rewards-text {
+    font-size: 16px;
+  }
+}
+
+.tile-section {
+  .tile {
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .tile-content {
+      width: 100%;
+      min-height: 180px;
+      &.tile-gradient {
+        background: rgb(199,22,82);
+        background: -moz-linear-gradient(270deg, #EF5E24 0%, #EE263F 54.2%, #C71652 100%);
+        background: -webkit-linear-gradient(270deg, #EF5E24 0%, #EE263F 54.2%, #C71652 100%);
+        background: linear-gradient(270deg, #EF5E24 0%, #EE263F 54.2%, #C71652 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c71652', endColorstr='#ef5e24',GradientType=1 );
+      }
+      &.tile-gradient-dark {
+        background: rgba(25,11,51,1);
+        background: -moz-linear-gradient(108.12deg, rgba(43,139,120,1) 0%, rgba(25,11,51,1) 100%);
+        background: -webkit-linear-gradient(108.12deg, rgba(43,139,120,1) 0%, rgba(25,11,51,1) 100%);
+        background: linear-gradient(108.12deg, rgba(43,139,120,1) 0%, rgba(25,11,51,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c71652', endColorstr='#ef5e24',GradientType=1 );
+      }
+    }
+  }
+  .tile-text {
+    position: relative;
+    width: 90%;
+    .tile-title {
+      font-size: 16px;
+    }
+    .tile-image {
+      position: absolute;
+      left: 0;
+      top: 20px;
+      width: 200%;
+      height: auto;
+      max-width: 500px;
+    }
+    .tile-image-right {
+      left: calc(100% - 240px);
+    }
+  }
+  .image-container {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+#travel-section-1 {
+  background:
+    url("/assets/img/map_usa.png") no-repeat center top,
+    linear-gradient(327.87deg, #2B8B78 0%, #214351 26.18%, #190B33 100%) right top;
+  background-size:
+    100% auto,
+    100% 200%;
+  overflow: hidden;
+}
+
+#travel-section-2 {
+  background:
+    url("/assets/img/map_italy.png") no-repeat center top,
+    linear-gradient(327.87deg, #2B8B78 0%, #214351 26.18%, #190B33 100%) right bottom;
+  background-size:
+    100% auto,
+    100% 200%;
+  overflow: hidden;
+}
+
+.step {
+  position: relative;
+  max-width: 100%;
+  * {
+    vertical-align: top;
+  }
+  .step-number {
+    display: inline-block;
+    h1 {
+      line-height: 132px;
+      font-size: 162px;
+      letter-spacing: 8.95px;
+      display: inline-block;
+    }
+  }
+  .step-content {
+    display: inline-block;
+    max-width: calc(100% - 265px);
+    .step-title {
+      font-size: 44px;
+    }
+    .step-text {
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+}
+
+#first-step, .third-step {
+  padding-top: 50px;
+}
+
+#second-step {
+  padding-top: calc((100% * .48) - 100px);
+}
+
+#fourth-step {
+  padding-top: calc((100% * .61) - 100px);
+}
+
+#first-path, #third-path {
+  position: absolute;
+  height: auto;
+  left: 50px;
+  top: calc(100% - 50px);
+  width: 90%;
+}
+
+#second-path {
+  position: absolute;
+  height: auto;
+  right: 50px;
+  top: calc(100% - 50px);
+  width: 90%;
+}
+
+#half-path {
+  position: absolute;
+  height: auto;
+  right: 50px;
+  bottom: 100%;
+  width: 90%;
+}
+
+@media (min-width: 576px) {
+  .rewards-section {
+    .rewards-title {
+      font-size: 100px;
+      letter-spacing: 5.63px;
+      line-height: 92px;
+    }
+    .rewards-text {
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .tile-section {
+    .tile {
+      .tile-content {
+        min-height: 450px;
+      }
+    }
+    .tile-text {
+      width: 75%;
+      .tile-title, .tile-subtitle {
+        font-size: 25px;
+        line-height: 36px;
+      }
+      .tile-image {
+        top: 35px;
+        width: 800px;
+        max-width: 800px;
+        height: auto;
+      }
+      .tile-image-right {
+        left: calc(100% - 380px);
+      }
+      .tile-subtitle {
+        margin-top: 75px;
+        max-width: 400px;
+      }
+    }
+  }
+
+  #first-path, #third-path {
+    left: 50px;
+    top: calc(100% - 50px);
+    width: 90%;
+  }
+}
+@media (min-width: 1200px) {
+  #first-step, #third-step {
+    margin-top: 150px;
+  }
+  #second-step, #fourth-step {
+    margin-bottom: 150px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #first-step, #third-step {
+    padding-top: 0;
+  }
+  #first-path, #third-path {
+    top: calc(100% - 20px)!important;
+  }
+  #second-step {
+    padding-top: calc((100% * .48) - 75px);
+  }
+  #fourth-step {
+    padding-top: calc((100% * .61) - 75px);
+  }
+  #second-path {
+    right: 30px;
+    top: calc(100% - 30px);
+    width: 90%;
+  }
+  .step {
+    .step-number {
+      h1 {
+        line-height: 1;
+        font-size: 80px;
+        letter-spacing: 1px;
+      }
+    }
+    .step-content {
+      max-width: calc(100% - 115px);
+      .step-title {
+        font-size: 22px;
+      }
+      .step-text {
+        font-size: 12px;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+@media (max-width: 575.98px) {
+  .tile-section {
+    .tile-image-right {
+      left: 5px!important;
+    }
+  }
+  #first-path, #third-path {
+    top: calc(100% - 60px)!important;
+    left: 35px;
+  }
+  #second-path {
+     right: 20px;
+     top: calc(100% - 50px);
+   }
+  #half-path {
+    width: 80%;
+  }
+}

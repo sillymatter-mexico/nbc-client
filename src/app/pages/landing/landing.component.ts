@@ -2,7 +2,7 @@ import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import Swiper from 'swiper';
 import {SliderService} from '../../services/slider.service';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Observable, Subscription} from 'rxjs';
+import { Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-landing',
