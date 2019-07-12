@@ -1,0 +1,105 @@
+.footer {
+  background-color: #1A1A1A;
+  .footer-logo {
+    max-width: 50%;
+    height: auto;
+    max-height: 92px;
+  }
+  .footer-text {
+    font-size: 25px;
+  }
+  .footer-links {
+    position: relative;
+    a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      opacity: 0.3;
+      transition: 0.3s;
+      font-size: 29px;
+      letter-spacing: 0.22px;
+      position: relative;
+      &:after {
+        content: '';
+        bottom: -10px;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        transition: 0.3s;
+        display:block;
+        border: none;
+        color: white;
+        height: 2px;
+        background: rgb(255,255,255);
+        background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(26,26,26,1) 100%);
+        background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(26,26,26,1) 100%);
+        background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(26,26,26,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#1a1a1a',GradientType=1 );
+      }
+      &:hover {
+        opacity: 1;
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .vertical-divider {
+    position: absolute;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(26,26,26,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(26,26,26,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(26,26,26,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#1a1a1a',GradientType=0 );
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+  }
+  .horizontal-divider {
+    position: absolute;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(26,26,26,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(26,26,26,1) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(26,26,26,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#1a1a1a',GradientType=1 );
+    left: 0;
+    top: 0;
+    height: 2px;
+    width: 100%;
+  }
+}
+
+.footer-bottom {
+  background: #EE263F;
+  background: linear-gradient(270deg, #EF5E24 0%, #EE263F 54.2%, #C71652 100%);
+  background: -webkit-linear-gradient(270deg, #EF5E24 0%, #EE263F 54.2%, #C71652 100%);
+  background: -moz-linear-gradient(270deg, #EF5E24 0%, #EE263F 54.2%, #C71652 100%);
+  .logo-club {
+    width: auto;
+    max-height: 48px;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .footer {
+    .footer-logo {
+      max-width: 30%;
+      height: auto;
+    }
+    .footer-text {
+      font-size: 10px;
+    }
+    .footer-links {
+      a {
+        font-size: 12px;
+      }
+    }
+  }
+  .footer-bottom {
+    .logo-club {
+      max-height: 24px;
+    }
+  }
+}

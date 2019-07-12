@@ -1,5 +1,5 @@
 
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {MenuService} from '../../services/menu.service';
 
 @Component({
@@ -8,6 +8,8 @@ import {MenuService} from '../../services/menu.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+
+  @Input() public hideSignIn: boolean;
 
   constructor(private menuService: MenuService) {
   }

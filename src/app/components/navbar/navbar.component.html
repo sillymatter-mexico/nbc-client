@@ -1,17 +1,22 @@
 
-  <div class="row justify-content-center sticky-top app-navbar mx-n3 px-3 pb-3 pt-3 pt-md-5">
+  <div class="row justify-content-center sticky-top app-navbar mx-n3 px-3 pb-3 pt-3">
     <div class="col-3 col-md-auto col-lg-4 d-none d-sm-block text-center text-md-left">
-      <img src="/assets/img/logos/logo_universal.png" alt="" class="img-fluid navbar-logo logo-nbc">
+      <a href="http://www.nbcuniversal.com/" target="_blank">
+        <img src="/assets/img/logos/logo_agente.png" alt="" class="img-fluid navbar-logo logo-nbc">
+      </a>
     </div>
-    <div class="col-3 col-md-4 text-center d-none d-sm-block">
-      <img src="/assets/img/logos/logo_club.png" alt="" class="img-fluid navbar-logo logo-club">
+    <div class="col-3 col-md-4 p-0 px-md-3 text-center">
+      <a href="https://www.clubpremier.com/mx/bienvenido/" target="_blank">
+        <img src="/assets/img/logos/logo_club.png" alt="" class="img-fluid navbar-logo logo-club pt-2">
+      </a>
     </div>
-    <div class="col-12 col-sm-6 col-md-auto col-lg-4 text-center text-md-right align-vertical-middle">
-      <button class="app-btn navbar-button text-uppercase mt-2">
-        Registrarme
+    <div class="col-9 col-sm-6 col-md-auto p-0 px-md-3 col-lg-4 text-center text-md-right align-vertical-middle">
+      <button class="app-btn outline-btn-light navbar-button text-uppercase mt-2"
+              routerLink="/" fragment="registro" *ngIf="!hideSignIn">
+        Participa
       </button>
       <i-feather name="menu" id="navbar-menu" (click)="toggleMenu()"
-                 class="text-white mt-3 ml-0 mt-md-2 ml-sm-3 cursor-pointer">
+                 class="text-white ml-0 mt-2 mt-md-2 ml-sm-3 cursor-pointer">
       </i-feather>
     </div>
   </div>

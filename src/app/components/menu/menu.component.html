@@ -3,12 +3,14 @@
   <a class="btn-close" (click)="toggleMenu()">&times;</a>
 
   <div class="overlay-content">
-    <a href="#">Inicio</a>
-    <a href="#">Registro</a>
-    <a href="#">Bases</a>
-    <a href="#">Mecánica</a>
-    <a href="#">Premios</a>
-    <a href="#" class="privacy-link">Aviso de privacidad</a>
+    <a routerLink="/" fragment="inicio" (click)="toggleMenu()">Inicio</a>
+    <a routerLink="/" fragment="registro" (click)="toggleMenu()">Registro</a>
+    <a routerLink="/premios" (click)="toggleMenu()">Premios</a>
+    <a routerLink="/" fragment="mecanica" (click)="toggleMenu()">Mecánica</a>
+    <a routerLink="/bases" (click)="toggleMenu()">Bases del concurso</a>
+    <a routerLink="/privacidad" class="privacy-link" (click)="toggleMenu()">Aviso de privacidad</a>
   </div>
+
+  <img src="/assets/img/agent_menu.png" alt="" class="menu-agent img-fluid">
 
 </div>
