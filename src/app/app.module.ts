@@ -16,6 +16,10 @@ import {GamePageComponent} from './pages/game-page/game-page.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RewardsComponent } from './pages/rewards/rewards.component';
+import { PrivacyComponent } from './pages/privacy/privacy.component';
+import { TextWallComponent } from './components/text-wall/text-wall.component';
+import {NgxMdModule} from 'ngx-md';
+import { BasesComponent } from './pages/bases/bases.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,10 @@ import { RewardsComponent } from './pages/rewards/rewards.component';
     GamePageComponent,
     SliderComponent,
     FooterComponent,
-    RewardsComponent
+    RewardsComponent,
+    PrivacyComponent,
+    TextWallComponent,
+    BasesComponent
 
 ],
   imports: [
@@ -40,6 +47,7 @@ import { RewardsComponent } from './pages/rewards/rewards.component';
     ReactiveFormsModule,
     IconsModule,
     CollapseModule.forRoot(),
+    NgxMdModule.forRoot()
   ],
   bootstrap: [AppComponent]
 })

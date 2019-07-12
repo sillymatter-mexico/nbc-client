@@ -1,5 +1,6 @@
 @import 'fonts';
 @import '~swiper/dist/css/swiper.min.css';
+@import '~simplebar/dist/simplebar.css';
 
 body {
   -webkit-touch-callout: none;
@@ -201,3 +202,8 @@ body {
   padding: 10px 36px 8px;
   max-width: 300px;
 }
+.simplebar-scrollbar:before {
+  background: #EE263F ;
+  border-radius: 7px;
+}
+
