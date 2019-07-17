@@ -21,6 +21,8 @@ import { TextWallComponent } from './components/text-wall/text-wall.component';
 import {NgxMdModule} from 'ngx-md';
 import { BasesComponent } from './pages/bases/bases.component';
 import { GameContainerComponent } from './pages/game-container/game-container.component';
+import { PointsComponent } from './pages/points/points.component';
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { GameContainerComponent } from './pages/game-container/game-container.co
     PrivacyComponent,
     TextWallComponent,
     BasesComponent,
-    GameContainerComponent
+    GameContainerComponent,
+    PointsComponent
 
 ],
   imports: [
@@ -47,6 +50,7 @@ import { GameContainerComponent } from './pages/game-container/game-container.co
     FormsModule,
     ReactiveFormsModule,
     IconsModule,
+    AngularFontAwesomeModule,
     AppRoutingModule,
     CollapseModule.forRoot(),
     NgxMdModule.forRoot()

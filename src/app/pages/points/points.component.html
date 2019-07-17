@@ -1,0 +1,129 @@
+<div class="container-fluid points-container d-flex flex-column">
+  <app-navbar [hideSignIn]="true"></app-navbar>
+  <div class="row flex-fill py-3 align-items-center">
+    <div class="col-12 col-lg-6 text-center mt-3 mt-lg-0 order-last order-lg-first">
+      <div class="slider-container">
+        <div class="swiper-container points-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="container-fluid p-3 p-lg-5 slider-tile" [style.backgroundImage]="'url(/assets/img/tile_game_1.png)'">
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <img src="/assets/img/logos/logo_game_1.png" class="game-logo">
+                  </div>
+                  <div class="col-12 text-center game-score">
+                    <h4 class="font-volte-bold text-uppercase">Total de puntos</h4>
+                    <h1 class="font-volte-bold text-uppercase">350</h1>
+                  </div>
+                  <div class="col-12 tile-bottom">
+                    <img src="/assets/img/texts/text_juego_1.png" alt="" class="game-number">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="container-fluid p-3 p-lg-5 slider-tile" [style.backgroundImage]="'url(/assets/img/tile_game_2.png)'">
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <img src="/assets/img/logos/logo_game_2.png" class="img-fluid game-logo">
+                  </div>
+                  <div class="col-12 text-center game-score">
+                    <h4 class="font-volte-bold text-uppercase">Total de puntos</h4>
+                    <h1 class="font-volte-bold text-uppercase">350</h1>
+                  </div>
+                  <div class="col-12 tile-bottom">
+                    <img src="/assets/img/texts/text_juego_2.png" alt="" class="game-number">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="container-fluid p-3 p-lg-5 slider-tile" [style.backgroundImage]="'url(/assets/img/tile_game_3.png)'">
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <img src="/assets/img/logos/logo_game_3.png" class="img-fluid game-logo">
+                  </div>
+                  <div class="col-12 text-center game-score">
+                    <h4 class="font-volte-bold text-uppercase">Total de puntos</h4>
+                    <h1 class="font-volte-bold text-uppercase">350</h1>
+                  </div>
+                  <div class="col-12 tile-bottom">
+                    <img src="/assets/img/texts/text_juego_3.png" alt="" class="game-number">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="container-fluid p-3 p-lg-5 slider-tile" [style.backgroundImage]="'url(/assets/img/tile_game_4.png)'">
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <img src="/assets/img/logos/logo_game_4.png" class="img-fluid game-logo">
+                  </div>
+                  <div class="col-12 text-center game-score">
+                    <h4 class="font-volte-bold text-uppercase">Total de puntos</h4>
+                    <h1 class="font-volte-bold text-uppercase">350</h1>
+                  </div>
+                  <div class="col-12 tile-bottom">
+                    <img src="/assets/img/texts/text_juego_4.png" alt="" class="game-number">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 text-center">
+      <div class="score-box p-3 text-center container-fluid">
+        <div class="row align-items-center">
+          <div class="col-12 text-center py-3">
+            <img src="/assets/img/logos/logo_club_black.png" alt="" class="score-logo">
+          </div>
+          <div class="col-12 col-lg-4 p-3 py-0">
+            <img src="/assets/img/avatar.png" alt="" class="img-fluid avatar">
+          </div>
+          <div class="col-12 col-lg-8 p-3 text-center text-lg-left">
+            <div class="vertical-divider d-none d-lg-block"></div>
+            <div class="horizontal-divider d-lg-none"></div>
+            <h4 class="font-usans-heavy text-uppercase club-number-title">Número de socio Club Premier</h4>
+            <p class="club-number score-text m-0"><strong>081234567</strong></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center py-3">
+            <p class="score-text">
+              N° de acumulaciones
+            </p>
+            <h1 class="score text-pink">{{ 1340 | number}}</h1>
+          </div>
+          <div class="col-12">
+            <div class="stats-card container-fluid p-3">
+              <div class="row text-center align-items-center">
+                <div class="col-6">
+                  <img src="/assets/img/icons/game.png" alt="" class="img-fluid stat-icon">
+                  <p class="score-text light">Juegos <br>completados</p>
+                  <hr class="d-none d-lg-block">
+                  <p class="score text-dark">02</p>
+                </div>
+                <div class="col-6">
+                  <div class="vertical-divider"></div>
+                  <img src="/assets/img/icons/point.png" alt="" class="img-fluid stat-icon">
+                  <p class="score-text light">Total de <br>puntos por juegos</p>
+                  <hr class="d-none d-lg-block">
+                  <p class="score text-dark">650</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 text-center p-3">
+            <button class="app-btn btn-fb align-vertical-middle mt-3">
+              <fa name="facebook-square mr-3" size="lg"></fa>
+              <span class="font-volte-regular mt-1">Compartir en facebook</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
