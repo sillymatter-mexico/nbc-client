@@ -1,6 +1,6 @@
-# Ut cavo ignoscite et Cupido Trachinia spectant
+## Ut cavo ignoscite et Cupido Trachinia spectant
 
-## Spe in adstas moenibus deseruere iactatis debere
+### Spe in adstas moenibus deseruere iactatis debere
 
 [Lorem markdownum](http://www.nabatictus.com/possetadicis.html) saxa *tolle
 mentis* te coniuge animal Pallantias in iuvenis vocem Tyrrhenus lacus luctantia
@@ -20,7 +20,7 @@ Nece cum inania imitata fremit. Iam manat ad ille carentia: ab ne faciemque
 *generis regina*, ima! Quo habuisse inscius, inque! Ubi mirum, meruisse
 prohibebar in albi praecipiet moveat, sistetur.
 
-## Retro moenibus ingens
+### Retro moenibus ingens
 
 Ganymedes vestem, talibus haec, specto, excedere *sit natura dum* amorem vides
 ovantem. Ter cadentibus, quam citaeque et fera, cum videt sermo? Sorores

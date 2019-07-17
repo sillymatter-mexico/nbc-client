@@ -9,7 +9,7 @@ import {SliderService} from '../../services/slider.service';
 })
 export class SliderComponent implements OnInit, AfterViewInit {
 
-  public config = {
+  public mainConfig = {
     keyboard: false,
     mousewheel: false,
     scrollbar: false,
@@ -32,7 +32,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
       disableOnInteraction: false
     },
   };
-  public slider: any;
+  public mainSlider: any;
 
   constructor(private sliderService: SliderService) {
     this.sliderService.slideChanged
@@ -44,18 +44,18 @@ export class SliderComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    this.slider = new Swiper('.main-slider', this.config);
+    this.mainSlider = new Swiper('.main-slider', this.mainConfig);
   }
 
   stopAutoplay() {
-    this.slider.autoplay.stop();
+    this.mainSlider.autoplay.stop();
   }
 
   startAutoplay() {
-    this.slider.autoplay.start();
+    this.mainSlider.autoplay.start();
   }
 
   goToSlide(slide: number) {
-    this.slider.slideToLoop(slide, 500, false);
+    this.mainSlider.slideToLoop(slide, 500, false);
   }
 }

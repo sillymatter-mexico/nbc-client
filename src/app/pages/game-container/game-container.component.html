@@ -1,0 +1,33 @@
+<div class="container-fluid games-container d-flex flex-column">
+  <app-navbar [hideSignIn]="true"></app-navbar>
+  <ng-container *ngFor="let game of games">
+    <div class="row flex-fill game-container"
+         [style.backgroundImage]="'url(' + game.background + ')'"
+         *ngIf="game.index === selectedGame">
+      <div class="col-12 game-counter my-3 my-md-5">
+        <div class="counter-item" (click)="setSelectedGame(game.index)"
+             [ngClass]="{'active-item': game.index === selectedGame}"
+             *ngFor="let game of games">
+          <h2>{{ getGameNumber(game.index) }}</h2>
+          <br>
+          <p class="d-none d-md-inline-block">
+            <span *ngIf="game.active">Juego</span>
+            <span *ngIf="!game.active">Próximamente</span>
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 col-xl-4 px-3 align-self-start text-center text-lg-left">
+        <img [src]="game.icon" alt="" class="img-fluid game-logo ml-lg-5">
+        <p class="game-description font-unio-italic text-white ml-lg-5 mb-5" [innerHTML]="game.description"></p>
+        <a [href]="game.url">
+          <button class="app-btn slide-button w-100 ml-lg-5" *ngIf="game.active">
+            <span class="text-uppercase">Jugar</span>
+          </button>
+        </a>
+      </div>
+      <div class="col-12 col-lg-6 col-xl-8 game-text-title">
+      <img [src]="game.textIndex" alt="" class="img-fluid">
+    </div>
+    </div>
+  </ng-container>
+</div>

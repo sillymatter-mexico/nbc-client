@@ -1,6 +1,10 @@
 .slider {
   min-height: calc(100vh - 75px);
-  background: linear-gradient(108.12deg, #2B8B78 0%, #190B33 100%) bottom right;
+  background: rgba(25,11,51,1);
+  background: linear-gradient(108.12deg, #2B8B78 0%, #190B33 100%);
+  background: -webkit-linear-gradient(108.12deg, #2B8B78 0%, #190B33 100%);
+  background: -moz-linear-gradient(108.12deg, #2B8B78 0%, #190B33 100%);
+  background-position: bottom right;
   background-size: 220% 100%;
   .swiper-container {
     height: 100%;

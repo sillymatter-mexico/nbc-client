@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FeatherModule } from 'angular-feather';
-import { Menu, Triangle, X, Key, Eye, EyeOff } from 'angular-feather/icons';
+import { Menu, Triangle, X, Key, Eye, EyeOff, Facebook } from 'angular-feather/icons';
 
 const icons = {
   Menu,
@@ -9,7 +9,8 @@ const icons = {
   X,
   Key,
   Eye,
-  EyeOff
+  EyeOff,
+  Facebook
 };
 
 @NgModule({
