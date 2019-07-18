@@ -27,7 +27,7 @@ export class GameContainerComponent implements OnInit {
         index: 1,
         textIndex: '/assets/img/texts/text_juego_1.png',
         active: true,
-        url: 'https://159.89.157.47/shooter/'
+        url: 'https://game-rookie.herokuapp.com/index.html'
       },
       {
         icon: '/assets/img/logos/logo_game_2.png',
