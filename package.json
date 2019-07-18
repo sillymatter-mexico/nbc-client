@@ -16,7 +16,7 @@
     "npm": "6.4.1"
   },
   "dependencies": {
-    "@angular/animations": "^8.0.3",
+    "@angular/animations": "^8.1.2",
     "@angular/common": "~8.0.1",
     "@angular/compiler": "~8.0.1",
     "@angular/core": "~8.0.1",
@@ -31,6 +31,7 @@
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "^4.3.0",
     "ngx-md": "^8.0.0",
+    "ngx-toastr": "^10.0.4",
     "path": "^0.12.7",
     "rxjs": "~6.4.0",
     "simplebar": "^4.1.0",

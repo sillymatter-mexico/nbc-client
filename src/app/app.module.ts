@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {IconsModule} from './icons/icons.module';
 import { LandingComponent } from './pages/landing/landing.component';
@@ -18,11 +18,14 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RewardsComponent } from './pages/rewards/rewards.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { TextWallComponent } from './components/text-wall/text-wall.component';
-import {NgxMdModule} from 'ngx-md';
+import { NgxMdModule } from 'ngx-md';
 import { BasesComponent } from './pages/bases/bases.component';
 import { GameContainerComponent } from './pages/game-container/game-container.component';
 import { PointsComponent } from './pages/points/points.component';
-import {AngularFontAwesomeModule} from 'angular-font-awesome';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import {ServerHttpInterceptor} from './interceptors/server.interceptor';
+import {AuthHttpInterceptor} from './interceptors/auth.interceptor';
+import {ToastrModule} from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,6 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
     BasesComponent,
     GameContainerComponent,
     PointsComponent
-
 ],
   imports: [
     BrowserModule,
@@ -52,9 +54,22 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
     IconsModule,
     AngularFontAwesomeModule,
     AppRoutingModule,
+    ToastrModule.forRoot(),
     CollapseModule.forRoot(),
     NgxMdModule.forRoot()
   ],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ServerHttpInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthHttpInterceptor,
+      multi: true
+    },
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

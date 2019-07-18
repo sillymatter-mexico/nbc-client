@@ -15,6 +15,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
     scrollbar: false,
     navigation: false,
     autoHeight: true,
+    allowTouchMove: false,
     pagination: {
       el: '.swiper-pagination',
       clickable: true

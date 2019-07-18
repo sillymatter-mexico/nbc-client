@@ -17,18 +17,23 @@
         <p class="sign-up-text px-3 my-2 my-lg-4">
           Ingresa la siguiente información para registrarte:
         </p>
-        <form>
+        <form [formGroup]="loginForm">
           <div class="form-group px-0 px-lg-3">
-            <input type="number" class="form-control app-input" id="associateNumber" placeholder="Número de socio Club Premier">
+            <input type="number" class="form-control app-input" name="club_premier_id"
+                   id="associateNumber" placeholder="Número de socio Club Premier" (keydown)="loginError = undefined"
+                   formControlName="club_premier_id" [ngClass]="{'is-invalid': loginError !== undefined}">
+            <div class="invalid-feedback" *ngIf="loginError !== undefined">{{loginError}}</div>
           </div>
           <div class="form-group px-3">
             <div class="custom-control custom-checkbox sign-up-checkbox text-left text-md-center">
-              <input type="checkbox" class="custom-control-input" id="terms">
+              <input type="checkbox" class="custom-control-input"
+                     id="terms" name="accepts_terms" formControlName="accepts_terms">
               <label class="custom-control-label" for="terms">Acepto <u>términos y condiciones</u></label>
             </div>
           </div>
           <div class="w-100 text-center">
-            <button class="app-btn my-3 sign-up-button" routerLink="/juegos">
+            <button class="app-btn my-3 sign-up-button"
+                    [disabled]="!loginForm.valid" (click)="onLogin()">
               <span class="text-uppercase">Comenzar</span>
             </button>
           </div>
