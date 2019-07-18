@@ -1,5 +1,5 @@
 <div class="container-fluid games-container d-flex flex-column">
-  <app-navbar [hideSignIn]="true"></app-navbar>
+  <app-navbar></app-navbar>
   <ng-container *ngFor="let game of games">
     <div class="row flex-fill game-container"
          [style.backgroundImage]="'url(' + game.background + ')'"

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +26,12 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import {ServerHttpInterceptor} from './interceptors/server.interceptor';
 import {AuthHttpInterceptor} from './interceptors/auth.interceptor';
 import {ToastrModule} from 'ngx-toastr';
+import {UserService} from './services/user.service';
+import {AuthGuard} from './guards/auth.guard';
+
+export function onInit(userService: UserService) {
+  return () => userService.getSavedSession();
+}
 
 @NgModule({
   declarations: [
@@ -60,6 +66,12 @@ import {ToastrModule} from 'ngx-toastr';
   ],
   providers: [
     {
+      provide: APP_INITIALIZER,
+      useFactory: onInit,
+      deps: [UserService],
+      multi: true
+    },
+    {
       provide: HTTP_INTERCEPTORS,
       useClass: ServerHttpInterceptor,
       multi: true
@@ -69,6 +81,7 @@ import {ToastrModule} from 'ngx-toastr';
       useClass: AuthHttpInterceptor,
       multi: true
     },
+    AuthGuard,
   ],
   bootstrap: [AppComponent],
 })

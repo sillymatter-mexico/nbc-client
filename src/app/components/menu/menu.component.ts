@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuService} from '../../services/menu.service';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,7 +11,7 @@ export class MenuComponent implements OnInit {
 
   public expanded: boolean;
 
-  constructor(private menuService: MenuService) {
+  constructor(private menuService: MenuService, public userService: UserService) {
     this.expanded = this.menuService.isExpanded.getValue();
     this.menuService.isExpanded
       .subscribe((expanded: boolean) => {
@@ -24,4 +25,10 @@ export class MenuComponent implements OnInit {
   toggleMenu() {
     this.menuService.toggleMenu();
   }
+
+  logout() {
+    this.toggleMenu();
+    this.userService.logout();
+  }
+
 }

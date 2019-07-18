@@ -3,6 +3,7 @@ import Swiper from 'swiper';
 import {SliderService} from '../../services/slider.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import { Subscription} from 'rxjs';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-landing',
@@ -38,7 +39,8 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(private sliderService: SliderService,
               private route: ActivatedRoute,
-              private router: Router) {
+              private router: Router,
+              private userService: UserService) {
 
   }
 
@@ -50,8 +52,12 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
     this.florenciaSlider = new Swiper('.florencia-slider', this.config);
     this.routeSubscription = this.route.fragment.subscribe((fragment: string) => {
       if (fragment === 'registro') {
-        this.sliderService.changeSlide(0);
-        this.router.navigate([]);
+        if (this.userService.loggedIn) {
+          this.router.navigateByUrl('/juegos');
+        } else {
+          this.sliderService.changeSlide(0);
+          this.router.navigate([]);
+        }
       }
       if (fragment === 'inicio') {
         this.sliderService.changeSlide(1);
@@ -65,7 +71,11 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   goToRegister(element: any) {
-    element.scrollIntoView({behavior: 'smooth', block: 'start'});
-    this.sliderService.changeSlide(0);
+    if (this.userService.loggedIn) {
+      this.router.navigateByUrl('/juegos');
+    } else  {
+      element.scrollIntoView({behavior: 'smooth', block: 'start'});
+      this.sliderService.changeSlide(0);
+    }
   }
 }

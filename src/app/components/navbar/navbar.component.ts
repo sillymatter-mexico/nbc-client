@@ -1,6 +1,7 @@
 
 import {Component, Input, OnInit} from '@angular/core';
 import {MenuService} from '../../services/menu.service';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,9 +10,8 @@ import {MenuService} from '../../services/menu.service';
 })
 export class NavbarComponent implements OnInit {
 
-  @Input() public hideSignIn: boolean;
-
-  constructor(private menuService: MenuService) {
+  constructor(private menuService: MenuService,
+              public userService: UserService) {
   }
 
   ngOnInit() {

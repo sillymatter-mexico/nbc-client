@@ -1,6 +1,8 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import Swiper from 'swiper';
 import {SliderService} from '../../services/slider.service';
+import {UserService} from '../../services/user.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-slider',
@@ -15,19 +17,19 @@ export class SliderComponent implements OnInit, AfterViewInit {
     scrollbar: false,
     navigation: false,
     autoHeight: true,
-    allowTouchMove: false,
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     },
     observer: true,
+    observeSlideChildren: true,
     direction: 'horizontal',
     effect: 'slide',
     spaceBetween: 0,
     initialSlide: 1,
     slidesPerView: 1,
     centeredSlides: true,
-    loop: true,
+    loop: false,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false
@@ -35,7 +37,9 @@ export class SliderComponent implements OnInit, AfterViewInit {
   };
   public mainSlider: any;
 
-  constructor(private sliderService: SliderService) {
+  constructor(private sliderService: SliderService,
+              private userService: UserService,
+              private router: Router) {
     this.sliderService.slideChanged
       .subscribe((slide: number) => {
         this.goToSlide(slide);
@@ -57,6 +61,10 @@ export class SliderComponent implements OnInit, AfterViewInit {
   }
 
   goToSlide(slide: number) {
-    this.mainSlider.slideToLoop(slide, 500, false);
+    if (slide === 0 && this.userService.loggedIn) {
+      this.router.navigateByUrl('/juegos');
+    } else {
+      this.mainSlider.slideToLoop(slide, 500, false);
+    }
   }
 }
