@@ -26,7 +26,7 @@ export class GameContainerComponent implements OnInit {
           <span class="text-pink">Los Ángeles</span>.`,
         index: 1,
         textIndex: '/assets/img/texts/text_juego_1.png',
-        active: true,
+        active: false,
         url: 'https://game-rookie.herokuapp.com/index.html'
       },
       {
