@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {fadeInOutAnimation} from '../../animations/router.animation';
+import { environment } from './../../../environments/environment';
+import {UserService} from '../../services/user.service';
+import {GameService} from '../../services/game.service';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-game-container',
@@ -11,8 +15,13 @@ export class GameContainerComponent implements OnInit {
 
   public games: any[];
   public selectedGame: number;
+  public loadingContainer: boolean;
+  private currentGameWindow: any;
 
-  constructor() {
+  constructor(private userService: UserService,
+              private gameService: GameService,
+              private toastrService: ToastrService) {
+    this.loadingContainer = false;
     this.selectedGame = 1;
     this.games = [
       {
@@ -27,7 +36,8 @@ export class GameContainerComponent implements OnInit {
         index: 1,
         textIndex: '/assets/img/texts/text_juego_1.png',
         active: true,
-        url: 'https://159.89.157.47/shooter/'
+        completed: false,
+        url: `${environment.gameServer}/shooter/`
       },
       {
         icon: '/assets/img/logos/logo_game_2.png',
@@ -41,8 +51,9 @@ export class GameContainerComponent implements OnInit {
           abuso infantil y violencia doméstica.`,
         index: 2,
         textIndex: '/assets/img/texts/text_juego_2.png',
-        active: false,
-        url: 'https://159.89.157.47/memory/'
+        active: true,
+        completed: false,
+        url: `${environment.gameServer}/law-and-order/`
       },
       {
         icon: '/assets/img/logos/logo_game_3.png',
@@ -55,7 +66,8 @@ export class GameContainerComponent implements OnInit {
         index: 3,
         textIndex: '/assets/img/texts/text_juego_3.png',
         active: false,
-        url: 'https://159.89.157.47/car/'
+        completed: false,
+        url: `${environment.gameServer}/disctrict-21/`
       },
       {
         icon: '/assets/img/logos/logo_game_4.png',
@@ -67,12 +79,30 @@ export class GameContainerComponent implements OnInit {
         index: 4,
         textIndex: '/assets/img/texts/text_juego_4.png',
         active: false,
-        url: 'https://159.89.157.47/puzzle/'
+        completed: false,
+        url: `${environment.gameServer}/deal-maker/`
       }
     ];
+    this.fetchGameInfo();
   }
 
   ngOnInit() {
+  }
+
+  fetchGameInfo() {
+    this.loadingContainer = true;
+    this.userService.updateUserInfo()
+      .subscribe((data: any) => {
+        this.userService.gameInfo = data;
+        for (const item of data.game) {
+          this.games[item.game.order - 1].completed = item.game.completed;
+        }
+        console.log(this.games);
+        this.loadingContainer = false;
+        console.log('game info', data);
+      }, (error: any) => {
+        this.loadingContainer = false;
+      });
   }
 
   getGameNumber(index: number) {
@@ -82,4 +112,36 @@ export class GameContainerComponent implements OnInit {
   setSelectedGame(index: any) {
     this.selectedGame = index;
   }
+
+  sendMessage(message: any) {
+    localStorage.setItem('message', JSON.stringify(message));
+    localStorage.removeItem('message');
+  }
+
+  openGame(game: any) {
+    this.loadingContainer = true;
+    const games = this.userService.user.game;
+    if (games.some(x => x.game.order === game.index)) {
+      this.loadingContainer = false;
+      const currentGame = games.find(x => x.game.order === game.index);
+      localStorage.setItem('currentGame', JSON.stringify(currentGame));
+      this.currentGameWindow = window.open(game.url, '_blank');
+    } else {
+      this.createSession(game);
+    }
+  }
+
+  createSession({index, url}) {
+    this.gameService.createGameSession({number_game: index})
+      .subscribe((data: any) => {
+        this.loadingContainer = false;
+        console.log('create session data', data);
+        localStorage.setItem('currentGame', JSON.stringify(data));
+        this.currentGameWindow = window.open(url, '_blank');
+      }, (error: any) => {
+        this.loadingContainer = false;
+        this.toastrService.error('Ocurrió un error al cargar la sesión del juego');
+      });
+  }
+
 }

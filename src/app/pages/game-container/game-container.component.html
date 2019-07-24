@@ -19,15 +19,15 @@
       <div class="col-12 col-lg-6 col-xl-4 px-3 align-self-start text-center text-lg-left">
         <img [src]="game.icon" alt="" class="img-fluid game-logo ml-lg-5">
         <p class="game-description font-unio-italic text-white ml-lg-5 mb-5" [innerHTML]="game.description"></p>
-        <a [href]="game.url">
-          <button class="app-btn slide-button w-100 ml-lg-5" *ngIf="game.active">
-            <span class="text-uppercase">Jugar</span>
-          </button>
-        </a>
+        <button class="app-btn slide-button w-100 ml-lg-5"
+                *ngIf="game.active" (click)="openGame(game)">
+          <span class="text-uppercase">Jugar</span>
+        </button>
       </div>
       <div class="col-12 col-lg-6 col-xl-8 game-text-title">
       <img [src]="game.textIndex" alt="" class="img-fluid">
     </div>
     </div>
   </ng-container>
+  <ngx-loading [show]="loadingContainer"></ngx-loading>
 </div>

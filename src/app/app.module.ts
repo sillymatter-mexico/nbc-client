@@ -12,7 +12,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MenuComponent } from './components/menu/menu.component';
 import {CollapseModule} from 'ngx-bootstrap';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
-import {GamePageComponent} from './pages/game-page/game-page.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RewardsComponent } from './pages/rewards/rewards.component';
@@ -28,6 +27,7 @@ import {AuthHttpInterceptor} from './interceptors/auth.interceptor';
 import {ToastrModule} from 'ngx-toastr';
 import {UserService} from './services/user.service';
 import {AuthGuard} from './guards/auth.guard';
+import {ngxLoadingAnimationTypes, NgxLoadingModule} from 'ngx-loading';
 
 export function onInit(userService: UserService) {
   return () => userService.getSavedSession();
@@ -41,7 +41,6 @@ export function onInit(userService: UserService) {
     MenuComponent,
     SignUpComponent,
     SignUpComponent,
-    GamePageComponent,
     SliderComponent,
     FooterComponent,
     RewardsComponent,
@@ -62,7 +61,14 @@ export function onInit(userService: UserService) {
     AppRoutingModule,
     ToastrModule.forRoot(),
     CollapseModule.forRoot(),
-    NgxMdModule.forRoot()
+    NgxMdModule.forRoot(),
+    NgxLoadingModule.forRoot({
+      animationType: ngxLoadingAnimationTypes.threeBounce,
+      backdropBackgroundColour: 'rgba(0,0,0,0.5)',
+      primaryColour: '#C71652',
+      secondaryColour: '#EE263F',
+      tertiaryColour: '#EF5E24'
+    })
   ],
   providers: [
     {

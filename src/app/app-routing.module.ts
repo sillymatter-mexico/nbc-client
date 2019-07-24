@@ -7,6 +7,7 @@ import {PrivacyComponent} from './pages/privacy/privacy.component';
 import {BasesComponent} from './pages/bases/bases.component';
 import {GameContainerComponent} from './pages/game-container/game-container.component';
 import {PointsComponent} from './pages/points/points.component';
+import {AuthGuard} from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -14,8 +15,9 @@ const routes: Routes = [
   { path: 'premios', component: RewardsComponent },
   { path: 'privacidad', component: PrivacyComponent },
   { path: 'bases', component: BasesComponent },
-  { path: 'juegos', component: GameContainerComponent },
-  { path: 'puntos', component: PointsComponent },
+  { path: 'juegos', component: GameContainerComponent, canActivate: [AuthGuard] },
+  { path: 'puntos', component: PointsComponent, canActivate: [AuthGuard] },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

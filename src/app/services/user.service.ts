@@ -1,6 +1,6 @@
 import {Injectable, Injector} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {catchError, map} from 'rxjs/operators';
+import {catchError, map, retry} from 'rxjs/operators';
 import {throwError} from 'rxjs';
 import {Router} from '@angular/router';
 
@@ -22,11 +22,14 @@ export class UserService {
     this._user = user;
     this.loggedIn = true;
     localStorage.setItem('user', JSON.stringify(user));
-    console.log('user set', this._user);
   }
 
   get user() {
     return this._user;
+  }
+
+  set gameInfo(gameInfo: any) {
+    this.user = {...this._user, ...gameInfo};
   }
 
   public login(data: {club_premier_id: string, accepts_terms: boolean}) {
@@ -37,6 +40,18 @@ export class UserService {
           console.log('login error', err);
           return throwError(err);
         })
+      );
+  }
+
+  public updateUserInfo() {
+    return this.http.get( `users/${this.user.uuid}/info/`)
+      .pipe(
+        map((response: any) => response.data),
+        catchError(err => {
+          console.log('update info error', err);
+          return throwError(err);
+        }),
+        retry(3),
       );
   }
 

@@ -31,8 +31,6 @@ export class ServerHttpInterceptor implements HttpInterceptor {
         url: this.server + req.url
       });
 
-      console.log('final url', newReq.url);
-
       return next.handle(newReq);
     }
 
