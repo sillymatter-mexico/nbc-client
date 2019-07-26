@@ -69,7 +69,7 @@ export class GameContainerComponent implements OnInit {
         textIndex: '/assets/img/texts/text_juego_3.png',
         active: true,
         completed: false,
-        url: `${environment.gameServer}/disctrict-21/`,
+        url: `${environment.gameServer}/district-21/`,
         releaseDate: '29/08/19'
       },
       {
