@@ -12,7 +12,7 @@
           <br>
           <p class="d-none d-md-inline-block">
             <span *ngIf="game.active">Juego</span>
-            <span *ngIf="!game.active">Próximamente</span>
+            <span *ngIf="!game.active">Próximamente<br>{{game.releaseDate}}</span>
           </p>
         </div>
       </div>
@@ -25,8 +25,16 @@
         </button>
       </div>
       <div class="col-12 col-lg-6 col-xl-8 game-text-title">
-      <img [src]="game.textIndex" alt="" class="img-fluid">
-    </div>
+        <div style="width: 50%; margin: auto" class="d-none d-lg-block">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.youtube.com/embed/axWdqTw66sI"
+                    class="embed-responsive-item"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+        </div>
+        <img [src]="game.textIndex" alt="" class="img-fluid">
+      </div>
     </div>
   </ng-container>
   <ngx-loading [show]="loadingContainer"></ngx-loading>

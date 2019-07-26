@@ -35,9 +35,10 @@ export class GameContainerComponent implements OnInit {
           <span class="text-pink">Los Ángeles</span>.`,
         index: 1,
         textIndex: '/assets/img/texts/text_juego_1.png',
-        active: true,
+        active: false,
         completed: false,
-        url: `${environment.gameServer}/the-rookie/`
+        url: `${environment.gameServer}/the-rookie/`,
+        releaseDate: '15/08/19'
       },
       {
         icon: '/assets/img/logos/logo_game_2.png',
@@ -53,7 +54,8 @@ export class GameContainerComponent implements OnInit {
         textIndex: '/assets/img/texts/text_juego_2.png',
         active: true,
         completed: false,
-        url: `${environment.gameServer}/law-and-order/`
+        url: `${environment.gameServer}/law-and-order/`,
+        releaseDate: '22/08/19'
       },
       {
         icon: '/assets/img/logos/logo_game_3.png',
@@ -67,7 +69,8 @@ export class GameContainerComponent implements OnInit {
         textIndex: '/assets/img/texts/text_juego_3.png',
         active: true,
         completed: false,
-        url: `${environment.gameServer}/disctrict-21/`
+        url: `${environment.gameServer}/disctrict-21/`,
+        releaseDate: '29/08/19'
       },
       {
         icon: '/assets/img/logos/logo_game_4.png',
@@ -80,7 +83,8 @@ export class GameContainerComponent implements OnInit {
         textIndex: '/assets/img/texts/text_juego_4.png',
         active: true,
         completed: false,
-        url: `${environment.gameServer}/deal-maker/`
+        url: `${environment.gameServer}/deal-maker/`,
+        releaseDate: '5/09/19'
       }
     ];
     this.fetchGameInfo();
