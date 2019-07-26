@@ -15,8 +15,8 @@ const routes: Routes = [
   { path: 'premios', component: RewardsComponent },
   { path: 'privacidad', component: PrivacyComponent },
   { path: 'bases', component: BasesComponent },
-  { path: 'juegos', component: GameContainerComponent, canActivate: [AuthGuard] },
-  { path: 'puntos', component: PointsComponent, canActivate: [AuthGuard] },
+  { path: 'juegos', component: GameContainerComponent },
+  { path: 'puntos', component: PointsComponent },
   { path: '**', redirectTo: '' },
 ];
 

@@ -34,7 +34,7 @@
             </div>
             <div class="w-100 text-center">
               <button class="app-btn my-3 sign-up-button"
-                      [disabled]="!loginForm.valid || loading" (click)="onLogin()">
+                      [disabled]="!loginForm.valid || loading" routerLink="/juegos">
                 <fa name="circle-o-notch" animation="spin" size="lg" class="mr-3 mt-0" *ngIf="loading"></fa>
                 <span class="text-uppercase">Comenzar</span>
               </button>

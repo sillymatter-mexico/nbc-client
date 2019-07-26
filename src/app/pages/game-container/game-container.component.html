@@ -19,10 +19,12 @@
       <div class="col-12 col-lg-6 col-xl-4 px-3 align-self-start text-center text-lg-left">
         <img [src]="game.icon" alt="" class="img-fluid game-logo ml-lg-5">
         <p class="game-description font-unio-italic text-white ml-lg-5 mb-5" [innerHTML]="game.description"></p>
-        <button class="app-btn slide-button w-100 ml-lg-5"
-                *ngIf="game.active" (click)="openGame(game)">
-          <span class="text-uppercase">Jugar</span>
-        </button>
+        <a [href]="game.url" target="_blank">
+          <button class="app-btn slide-button w-100 ml-lg-5"
+                  *ngIf="game.active">
+            <span class="text-uppercase">Jugar</span>
+          </button>
+        </a>
       </div>
       <div class="col-12 col-lg-6 col-xl-8 game-text-title">
         <div style="width: 50%; margin: auto" class="d-none d-lg-block">

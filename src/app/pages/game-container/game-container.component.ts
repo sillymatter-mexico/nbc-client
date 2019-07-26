@@ -35,7 +35,7 @@ export class GameContainerComponent implements OnInit {
           <span class="text-pink">Los Ángeles</span>.`,
         index: 1,
         textIndex: '/assets/img/texts/text_juego_1.png',
-        active: false,
+        active: true,
         completed: false,
         url: `${environment.gameServer}/the-rookie/`,
         releaseDate: '15/08/19'
@@ -87,7 +87,7 @@ export class GameContainerComponent implements OnInit {
         releaseDate: '5/09/19'
       }
     ];
-    this.fetchGameInfo();
+    // this.fetchGameInfo();
   }
 
   ngOnInit() {
