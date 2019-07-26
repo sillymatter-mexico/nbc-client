@@ -4,19 +4,19 @@
       <p class="d-inline-block text-white font-unio-italic pl-xl-3 mb-1 mb-lg-3">Conviértete en el próximo</p>
       <h1 class="no-margin text-uppercase font-usans-heavy pl-xl-3">Agente Universal</h1>
       <p class="sign-up-subtitle mb-3 mt-3 pl-xl-3 font-unio-italic">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <span class="text-pink">magna aliqua</span>.
+        Regístrate, completa las misiones, acumula puntos y<span class="text-pink"> gana</span>.
       </p>
     </div>
     <div class="col-12 col-lg-6 px-3 px-lg-5 text-center">
       <div class="sign-up-box p-3 p-lg-5">
         <img src="/assets/img/logos/logo_club_black.png" alt="" class="sign-up-logo">
         <p class="sign-up-text px-3 mt-3 mt-lg-5 mb-2 mb-lg-4">
-          <span class="font-volte-bold">Club Premier</span> te invita a participar por un increíble viaje, juega y completa tu entrenamiento.
+          <span class="font-volte-bold">Club Premier</span> te invita a vivir una experiencia increíble.
         </p>
         <div class="w-100" *ngIf="!userService.loggedIn">
           <hr>
           <p class="sign-up-text px-3 my-2 my-lg-4">
-            Ingresa la siguiente información para registrarte:
+            Ingresa tu Número de Socio Club Premier para registrarte:
           </p>
           <form [formGroup]="loginForm">
             <div class="form-group px-0 px-lg-3">
@@ -43,16 +43,17 @@
           <hr>
           <div class="w-100 text-center">
             <p class="sign-up-text text-center">
-              ¿Aún no eres socio <span class="font-volte-bold">Club Premier</span>? Registrate en el siguiente enlace
+              ¿Aún no eres socio <span class="font-volte-bold">Club Premier</span>?
+              <br>Inscríbete sin costo en
             </p>
             <a class="app-btn my-3 register-button outline-btn-dark" href="https://member.clubpremier.com/registro" target="_blank">
-              <span class="text-uppercase font-volte-semibold">Quiero ser socio Club Premier</span>
+              <span class="text-uppercase font-volte-semibold">clubpremier.com</span>
             </a>
           </div>
         </div>
         <div class="w-100 text-center" *ngIf="userService.loggedIn">
           <button class="app-btn my-3 sign-up-button" routerLink="/juegos">
-            <span class="text-uppercase">Comenzar</span>
+            <span class="text-uppercase">Participa</span>
           </button>
         </div>
       </div>

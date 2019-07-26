@@ -32,6 +32,10 @@
     width: 90%;
     .tile-title {
       font-size: 14px;
+      position: relative;
+    }
+    .tile-first-title {
+      line-height: 0.9;
     }
     .tile-image {
       position: absolute;
