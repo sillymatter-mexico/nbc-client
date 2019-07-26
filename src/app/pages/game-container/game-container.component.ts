@@ -37,7 +37,7 @@ export class GameContainerComponent implements OnInit {
         textIndex: '/assets/img/texts/text_juego_1.png',
         active: true,
         completed: false,
-        url: `${environment.gameServer}/shooter/`
+        url: `${environment.gameServer}/the-rookie/`
       },
       {
         icon: '/assets/img/logos/logo_game_2.png',
@@ -65,7 +65,7 @@ export class GameContainerComponent implements OnInit {
           ocupada de los delitos graves como el tráfico de drogas.`,
         index: 3,
         textIndex: '/assets/img/texts/text_juego_3.png',
-        active: false,
+        active: true,
         completed: false,
         url: `${environment.gameServer}/disctrict-21/`
       },
@@ -78,7 +78,7 @@ export class GameContainerComponent implements OnInit {
           resolviendo sus crisis. Beaumont conoce a la perfección el comportamiento humano y criminal.`,
         index: 4,
         textIndex: '/assets/img/texts/text_juego_4.png',
-        active: false,
+        active: true,
         completed: false,
         url: `${environment.gameServer}/deal-maker/`
       }
