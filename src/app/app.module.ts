@@ -10,7 +10,7 @@ import {IconsModule} from './icons/icons.module';
 import { LandingComponent } from './pages/landing/landing.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MenuComponent } from './components/menu/menu.component';
-import {CollapseModule} from 'ngx-bootstrap';
+import {CollapseModule, ModalModule} from 'ngx-bootstrap';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -28,6 +28,7 @@ import {ToastrModule} from 'ngx-toastr';
 import {UserService} from './services/user.service';
 import {AuthGuard} from './guards/auth.guard';
 import {ngxLoadingAnimationTypes, NgxLoadingModule} from 'ngx-loading';
+import { CompletedModalComponent } from './components/completed-modal/completed-modal.component';
 
 export function onInit(userService: UserService) {
   return () => userService.getSavedSession();
@@ -48,7 +49,8 @@ export function onInit(userService: UserService) {
     TextWallComponent,
     BasesComponent,
     GameContainerComponent,
-    PointsComponent
+    PointsComponent,
+    CompletedModalComponent
 ],
   imports: [
     BrowserModule,
@@ -61,6 +63,7 @@ export function onInit(userService: UserService) {
     AppRoutingModule,
     ToastrModule.forRoot(),
     CollapseModule.forRoot(),
+    ModalModule.forRoot(),
     NgxMdModule.forRoot(),
     NgxLoadingModule.forRoot({
       animationType: ngxLoadingAnimationTypes.threeBounce,
@@ -69,6 +72,9 @@ export function onInit(userService: UserService) {
       secondaryColour: '#EE263F',
       tertiaryColour: '#EF5E24'
     })
+  ],
+  entryComponents: [
+    CompletedModalComponent
   ],
   providers: [
     {

@@ -212,3 +212,12 @@ body {
   border-radius: 7px;
 }
 
+.modal-content {
+  background: transparent!important;
+  border: 0 none;
+}
+
+.modal-backdrop {
+  opacity: 0.8!important;
+}
+

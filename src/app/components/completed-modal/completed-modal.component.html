@@ -1,0 +1,14 @@
+<div class="modal-body">
+  <div class="container-fluid modal-container"
+       [style.backgroundImage]="'url(/assets/img/backgrounds/bg_game_' + completedGame + '.png)'">
+    <div class="row py-5 px-3">
+      <div class="col-12 text-center">
+        <h1 class="text-white font-usans-heavy m-0">Has completado</h1>
+        <img [src]="'/assets/img/logos/logo_game_' + completedGame + '.png'" alt="" class="img-fluid">
+        <button type="button" (click)="bsModalRef.hide()" class="app-btn">
+          <span class="text-uppercase">Continuar</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -26,6 +26,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
     direction: 'horizontal',
     effect: 'slide',
     spaceBetween: 0,
+    allowTouchMove: false,
     initialSlide: 1,
     slidesPerView: 1,
     centeredSlides: true,
