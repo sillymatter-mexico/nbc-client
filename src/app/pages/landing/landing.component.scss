@@ -79,6 +79,7 @@
     font-weight: bold;
   }
   .instruction-text {
+    max-width: 100%;
     font-family: 'UniObjektiv', sans-serif;
     font-weight: normal;
     font-style: italic;
@@ -127,8 +128,8 @@
       font-size: 60px;
     }
     .instruction-text {
-      max-width: 70%;
       font-size: 24px;
+      max-width: 100%;
       letter-spacing: -0.01px;
       line-height: 33px;
       font-weight: 100;

@@ -19,11 +19,8 @@ export class GameService {
         background: '/assets/img/backgrounds/bg_game_1.png',
         cover: '/assets/img/tile_game_1.png',
         description: `
-          Comenzar de nuevo no es fácil, especialmente para el chico de una ciudad pequeña
-          <span class="text-pink">John Nolan</span> que,
-          después de un incidente que cambió su vida,
-          está persiguiendo su sueño de ser un oficial de policía de
-          <span class="text-pink">Los Ángeles</span>.`,
+            Este es el primer paso para ser <span class="text-pink">Agente Universal</span>
+             ¿Serás capaz de conseguir todas las pistas?`,
         index: 1,
         textIndex: '/assets/img/texts/text_juego_1.png',
         active: true,
@@ -39,13 +36,7 @@ export class GameService {
         icon: '/assets/img/logos/logo_game_2.png',
         background: '/assets/img/backgrounds/bg_game_2.png',
         cover: '/assets/img/tile_game_2.png',
-        description: `
-          Esta serie emocional y contundente de la marca <span class="text-pink">"Law & Order"</span>
-          de <span class="text-pink">NBC</span> narra las vidas de la
-          Unidad de Víctimas Especiales del Departamento de
-          <span class="text-pink">Policía de la Ciudad de Nueva York</span>,
-          un escuadrón de detectives de élite que investiga delitos de agresión sexual,
-          abuso infantil y violencia doméstica.`,
+        description: `Para ser un buen detective se necesita una buena memoria. <br>Veamos que tan bien lo haces`,
         index: 2,
         textIndex: '/assets/img/texts/text_juego_2.png',
         active: true,
@@ -61,11 +52,7 @@ export class GameService {
         icon: '/assets/img/logos/logo_game_3.png',
         background: '/assets/img/backgrounds/bg_game_3.png',
         cover: '/assets/img/tile_game_3.png',
-        description: `
-          El <span class="text-pink">Distrito 21</span> del Departamento de
-          <span class="text-pink">Policía de Chicago</span> está compuesto de policías uniformados,
-          que tratan con la delincuencia callejera y la unidad de Inteligencia,
-          ocupada de los delitos graves como el tráfico de drogas.`,
+        description: `Cada vez más cerca, toma el volante y demuestra que tan buen agente eres.`,
         index: 3,
         textIndex: '/assets/img/texts/text_juego_3.png',
         active: true,
@@ -81,10 +68,7 @@ export class GameService {
         icon: '/assets/img/logos/logo_game_4.png',
         background: '/assets/img/backgrounds/bg_game_4.png',
         cover: '/assets/img/tile_game_4.png',
-        description: `
-          <span class="text-pink">Eric Beaumont</span>, experto <span class="text-pink">negociador</span>
-          en conflictos criminales y su equipo, tratan de salvar las vidas de personas en situaciones vulnerables,
-          resolviendo sus crisis. Beaumont conoce a la perfección el comportamiento humano y criminal.`,
+        description: `Llegaste al final, sólo te queda demostrar tus habilidades de negociador y poner las piezas en su lugar.`,
         index: 4,
         textIndex: '/assets/img/texts/text_juego_4.png',
         active: true,
