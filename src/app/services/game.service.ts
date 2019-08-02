@@ -17,6 +17,7 @@ export class GameService {
       {
         icon: '/assets/img/logos/logo_game_1.png',
         background: '/assets/img/backgrounds/bg_game_1.png',
+        cover: '/assets/img/tile_game_1.png',
         description: `
           Comenzar de nuevo no es fácil, especialmente para el chico de una ciudad pequeña
           <span class="text-pink">John Nolan</span> que,
@@ -31,11 +32,13 @@ export class GameService {
         releaseDate: '15/08/19',
         maxPoints: 1000,
         highScore: 0,
+        highBonus: 0,
         attempt: 1
       },
       {
         icon: '/assets/img/logos/logo_game_2.png',
         background: '/assets/img/backgrounds/bg_game_2.png',
+        cover: '/assets/img/tile_game_2.png',
         description: `
           Esta serie emocional y contundente de la marca <span class="text-pink">"Law & Order"</span>
           de <span class="text-pink">NBC</span> narra las vidas de la
@@ -48,14 +51,16 @@ export class GameService {
         active: true,
         completed: false,
         url: `${environment.gameServer}/ley-y-orden/`,
-        releaseDate: '22/08/19',
-        maxPoints: 12900,
+        releaseDate: '29/08/19',
+        maxPoints: 4300,
         highScore: 0,
+        highBonus: 0,
         attempt: 1
       },
       {
         icon: '/assets/img/logos/logo_game_3.png',
         background: '/assets/img/backgrounds/bg_game_3.png',
+        cover: '/assets/img/tile_game_3.png',
         description: `
           El <span class="text-pink">Distrito 21</span> del Departamento de
           <span class="text-pink">Policía de Chicago</span> está compuesto de policías uniformados,
@@ -66,14 +71,16 @@ export class GameService {
         active: true,
         completed: false,
         url: `${environment.gameServer}/policia-de-chicago/`,
-        releaseDate: '29/08/19',
+        releaseDate: '12/09/19',
         maxPoints: 3000,
         highScore: 0,
+        highBonus: 0,
         attempt: 1
       },
       {
         icon: '/assets/img/logos/logo_game_4.png',
         background: '/assets/img/backgrounds/bg_game_4.png',
+        cover: '/assets/img/tile_game_4.png',
         description: `
           <span class="text-pink">Eric Beaumont</span>, experto <span class="text-pink">negociador</span>
           en conflictos criminales y su equipo, tratan de salvar las vidas de personas en situaciones vulnerables,
@@ -83,9 +90,10 @@ export class GameService {
         active: true,
         completed: false,
         url: `${environment.gameServer}/el-negociador/`,
-        releaseDate: '5/09/19',
+        releaseDate: '26/09/19',
         maxPoints: 3000,
         highScore: 0,
+        highBonus: 0,
         attempt: 1
       }
     ];

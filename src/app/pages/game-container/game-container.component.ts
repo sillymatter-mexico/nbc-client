@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {fadeInOutAnimation} from '../../animations/router.animation';
-import { environment } from './../../../environments/environment';
 import {UserService} from '../../services/user.service';
 import {GameService} from '../../services/game.service';
 import {ToastrService} from 'ngx-toastr';
@@ -53,8 +52,9 @@ export class GameContainerComponent implements OnInit {
           this.games[item.game.order - 1] = {
             ...this.games[item.game.order - 1],
             attempt: item.attempt,
-            highScore: item.high_score,
-            highBonus: item.high_bonus};
+            highScore: +item.high_score,
+            highBonus: +item.high_bonus
+          };
         }
         console.log(this.games);
         this.loadingContainer = false;
