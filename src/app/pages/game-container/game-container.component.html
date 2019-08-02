@@ -11,7 +11,8 @@
           <h2>{{ getGameNumber(game.index) }}</h2>
           <br>
           <p class="d-none d-md-inline-block">
-            <span *ngIf="game.active">Juego</span>
+            <span *ngIf="game.active && !isCompleted(game)">Juego</span>
+            <span *ngIf="game.active && isCompleted(game)">Completado</span>
             <span *ngIf="!game.active">Próximamente<br>{{game.releaseDate}}</span>
           </p>
         </div>

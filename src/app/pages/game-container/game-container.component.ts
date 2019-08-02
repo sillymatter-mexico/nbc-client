@@ -108,7 +108,11 @@ export class GameContainerComponent implements OnInit {
   }
 
   canBePlayed(game: any) {
-    return game.active && (game.highScore + game.highBonus) < game.maxPoints && game.attempt < 3;
+    return game.active && !this.isCompleted(game);
+  }
+
+  isCompleted(game: any) {
+    return !((game.highScore + game.highBonus) < game.maxPoints && game.attempt < 3);
   }
 
   private openCompletedModal(game: number) {

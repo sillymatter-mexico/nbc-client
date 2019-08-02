@@ -3,6 +3,8 @@ import Swiper from 'swiper';
 import {GameService} from '../../services/game.service';
 import {UserService} from '../../services/user.service';
 
+declare var FB;
+
 @Component({
   selector: 'app-points',
   templateUrl: './points.component.html',
@@ -82,5 +84,15 @@ export class PointsComponent implements OnInit, AfterViewInit {
       totalScore += game.highScore + game.highBonus;
     }
     return totalScore;
+  }
+
+  share() {
+    FB.ui({
+      method: 'share',
+      href: 'https://agenteuniversal.clubpremier.info',
+      hashtag: '#AgenteUniversal',
+      quote: 'He conseguido ' + this.getTotalScore() +
+             ' puntos con Agente Universal, entra y participa para la posibilidad de viajar a Chicago y Florencia.'
+    }, (response) => {console.log('response'); });
   }
 }

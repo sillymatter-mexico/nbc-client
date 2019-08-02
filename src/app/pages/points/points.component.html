@@ -48,7 +48,7 @@
             <p class="score-text">
               N° de acumulaciones
             </p>
-            <h1 class="score text-pink">{{ 35 | number}}</h1>
+            <h1 class="score text-pink">{{ userInfo?.accumulation || 0 | number}}</h1>
           </div>
           <div class="col-12">
             <div class="stats-card container-fluid p-3">
@@ -73,14 +73,10 @@
             <p class="font-volte-regular text-dark mt-3 mb-0">*Tus acumulaciones se actualizarán cada 15 días</p>
           </div>
           <div class="col-12 text-center p-3">
-            <div class="fb-share-button"
-                 data-href="https://agenteuniversal.clubpremier.info"
-                 data-layout="button" data-size="large">
-              <a target="_blank"
-                 href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
-                 class="fb-xfbml-parse-ignore">Compartir en facebook
-              </a>
-            </div>
+            <button class="app-btn btn-fb align-vertical-middle mt-3" (click)="share()">
+              <fa name="facebook-square mr-3" size="lg"></fa>
+              <span class="font-volte-regular mt-1">Compartir en facebook</span>
+            </button>
           </div>
         </div>
       </div>
