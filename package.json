@@ -29,6 +29,8 @@
     "bootstrap": "4.1.1",
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.26",
     "ngx-bootstrap": "^4.3.0",
     "ngx-loading": "^3.0.1",
     "ngx-md": "^8.0.0",

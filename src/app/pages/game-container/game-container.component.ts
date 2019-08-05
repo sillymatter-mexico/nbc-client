@@ -6,6 +6,7 @@ import {ToastrService} from 'ngx-toastr';
 import {ActivatedRoute, Router} from '@angular/router';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 import {CompletedModalComponent} from '../../components/completed-modal/completed-modal.component';
+import * as moment from 'moment-timezone';
 
 @Component({
   selector: 'app-game-container',
@@ -30,6 +31,7 @@ export class GameContainerComponent implements OnInit {
     this.loadingContainer = false;
     this.selectedGame = 1;
     this.games = this.gameService.gameList;
+    this.updateGameAvailability();
     this.fetchGameInfo();
     this.route.queryParams.subscribe(params => {
       if (params.finished) {
@@ -120,5 +122,18 @@ export class GameContainerComponent implements OnInit {
       completedGame: game
     };
     this.bsModalRef = this.modalService.show(CompletedModalComponent, {initialState});
+  }
+
+  private updateGameAvailability() {
+    const now = moment().tz('America/Mexico_City');
+    for (const game of this.games) {
+      const releaseDate = moment(game.releaseDateArray).tz('America/Mexico_City');
+      const isAfter = now.isAfter(releaseDate);
+      console.log(now.format() + 'is after ' + releaseDate.format(), isAfter);
+      if (isAfter) {
+        game.active = true;
+      }
+    }
+    console.log(this.games);
   }
 }
