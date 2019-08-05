@@ -53,9 +53,4 @@ export class SignUpComponent implements OnInit {
         }
       );
   }
-
-  toggleTerms() {
-    const value = this.loginForm.controls.accepts_terms.value;
-    this.loginForm.controls.accepts_terms.setValue(!value);
-  }
 }
