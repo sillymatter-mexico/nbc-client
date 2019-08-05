@@ -60,6 +60,8 @@ export class UserService {
       const u: string = localStorage.getItem('user');
       if (u !== undefined && u !== null) {
         this.user = JSON.parse(u);
+        const router = this.injector.get(Router);
+        router.navigate(['/juegos']);
       }
       resolve();
     });
