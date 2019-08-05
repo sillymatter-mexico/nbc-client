@@ -31,10 +31,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
     slidesPerView: 1,
     centeredSlides: true,
     loop: false,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
+    autoplay: false
   };
   public mainSlider: any;
 
@@ -51,14 +48,6 @@ export class SliderComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.mainSlider = new Swiper('.main-slider', this.mainConfig);
-  }
-
-  stopAutoplay() {
-    this.mainSlider.autoplay.stop();
-  }
-
-  startAutoplay() {
-    this.mainSlider.autoplay.start();
   }
 
   goToSlide(slide: number) {
