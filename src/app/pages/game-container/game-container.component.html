@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="col-12 col-lg-6 col-xl-4 px-3 align-self-start text-center text-lg-left">
-        <img [src]="game.icon" alt="" class="img-fluid game-logo ml-lg-5">
+        <img [src]="game.icon" alt="" class="img-fluid game-logo" [ngClass]="{'ml-lg-5': game.index > 1}">
         <p class="game-description font-unio-italic text-white ml-lg-5 mb-5" [innerHTML]="game.description"></p>
         <button class="app-btn slide-button w-100 ml-lg-5"
                 *ngIf="canBePlayed(game)" (click)="openGame(game)">
