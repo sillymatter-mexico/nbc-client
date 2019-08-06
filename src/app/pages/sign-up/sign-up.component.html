@@ -20,7 +20,7 @@
           </p>
           <form [formGroup]="loginForm">
             <div class="form-group px-0 px-lg-3">
-              <input type="number" class="form-control app-input" name="club_premier_id"
+              <input type="number" class="form-control app-input my-3 my-md-0" name="club_premier_id"
                      id="associateNumber" placeholder="Número de socio Club Premier" (keydown)="loginError = undefined"
                      formControlName="club_premier_id" [ngClass]="{'is-invalid': loginError !== undefined}">
               <div class="invalid-feedback" *ngIf="loginError !== undefined">{{loginError}}</div>
@@ -44,7 +44,7 @@
           <div class="w-100 text-center">
             <p class="sign-up-text text-center">
               ¿Aún no eres socio <span class="font-volte-bold">Club Premier</span>?
-              <br>Inscríbete sin costo en
+              <br>Inscríbete sin costo en:
             </p>
             <a class="app-btn my-3 register-button outline-btn-dark" href="https://member.clubpremier.com/registro" target="_blank">
               <span class="text-uppercase font-volte-semibold">clubpremier.com</span>

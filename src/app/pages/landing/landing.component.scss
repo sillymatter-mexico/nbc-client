@@ -35,6 +35,7 @@
       position: relative;
     }
     .tile-first-title {
+      font-size: 12px;
       line-height: 0.9;
     }
     .tile-image {
@@ -79,7 +80,6 @@
     font-weight: bold;
   }
   .instruction-text {
-    max-width: 100%;
     font-family: 'UniObjektiv', sans-serif;
     font-weight: normal;
     font-style: italic;
@@ -101,6 +101,10 @@
       .tile-title, .tile-subtitle {
         font-size: 25px;
         line-height: 36px;
+      }
+      .tile-first-title {
+        font-size: 25px;
+        line-height: 0.9;
       }
       .tile-image {
         top: 35px;

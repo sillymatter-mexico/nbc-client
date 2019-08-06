@@ -44,7 +44,7 @@
     .tile-image {
       position: absolute;
       left: 0;
-      top: 20px;
+      top: 44px;
       width: 200%;
       height: auto;
       max-width: 500px;
@@ -229,7 +229,7 @@
       }
     }
     .step-content {
-      max-width: calc(100% - 115px);
+      max-width: 100%;
       .step-title {
         font-size: 22px;
       }
