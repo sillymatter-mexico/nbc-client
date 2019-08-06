@@ -16,6 +16,13 @@
             <span *ngIf="!game.active">Próximamente<br>{{game.releaseDate}}</span>
           </p>
         </div>
+        <div class="mobile-status counter-item active-item d-block d-md-none">
+          <p class="text-center">
+            <span *ngIf="game.active && !isCompleted(game)">Juego</span>
+            <span *ngIf="game.active && isCompleted(game)">Completado</span>
+            <span *ngIf="!game.active">Próximamente<br>{{game.releaseDate}}</span>
+          </p>
+        </div>
       </div>
       <div class="col-12 col-lg-6 col-xl-4 px-3 align-self-start text-center text-lg-left">
         <img [src]="game.icon" alt="" class="img-fluid game-logo ml-lg-5">
