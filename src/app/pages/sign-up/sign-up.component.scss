@@ -56,6 +56,9 @@
     letter-spacing: 1.1px!important;
     font-size: 12px;
     cursor: pointer;
+    * {
+      pointer-events: none;
+    }
   }
   .custom-control-label:before{
     background-color: #D8D8D8;

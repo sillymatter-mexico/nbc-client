@@ -26,10 +26,10 @@
               <div class="invalid-feedback" *ngIf="loginError !== undefined">{{loginError}}</div>
             </div>
             <div class="form-group px-3">
-              <div class="custom-control custom-checkbox sign-up-checkbox text-left text-md-center">
+              <div class="custom-control custom-checkbox sign-up-checkbox text-left text-md-center" (click)="toggleTerms()">
                 <input type="checkbox" class="custom-control-input"
                        id="terms" name="accepts_terms" formControlName="accepts_terms">
-                <label class="custom-control-label" for="terms">Acepto <a routerLink="/privacidad">términos y condiciones</a></label>
+                <label class="custom-control-label">Acepto <a routerLink="/privacidad">términos y condiciones</a></label>
               </div>
             </div>
             <div class="w-100 text-center">

@@ -19,8 +19,8 @@ export class GameService {
         background: '/assets/img/backgrounds/bg_game_1.png',
         cover: '/assets/img/tile_game_1.png',
         description: `
-            Este es el primer paso para ser <span class="text-pink">Agente Universal</span>.<br>
-             ¿Serás capaz de conseguir todas las pistas?`,
+            <br>Este es el primer paso para ser un <span class="text-pink">Agente Universal</span>.<br>
+            ¿Serás capaz de conseguir todas <span class="text-pink">las pistas</span>?`,
         index: 1,
         textIndex: '/assets/img/texts/text_juego_1.png',
         active: true,
@@ -37,7 +37,9 @@ export class GameService {
         icon: '/assets/img/logos/logo_game_2.png',
         background: '/assets/img/backgrounds/bg_game_2.png',
         cover: '/assets/img/tile_game_2.png',
-        description: `Para ser un buen detective se necesita una buena memoria. <br>Veamos que tan bien lo haces.`,
+        description: `
+            <br>Para ser un buen detective se necesita una <span class="text-pink">buena memoria</span>.
+            <br><br>¡Veamos que tan bien lo haces!`,
         index: 2,
         textIndex: '/assets/img/texts/text_juego_2.png',
         active: true,
@@ -54,7 +56,7 @@ export class GameService {
         icon: '/assets/img/logos/logo_game_3.png',
         background: '/assets/img/backgrounds/bg_game_3.png',
         cover: '/assets/img/tile_game_3.png',
-        description: `Cada vez más cerca, toma el volante y demuestra que tan buen agente eres.`,
+        description: `Cada vez más cerca, toma el <span class="text-pink">volante</span> y demuestra que tan buen agente eres.`,
         index: 3,
         textIndex: '/assets/img/texts/text_juego_3.png',
         active: true,
@@ -71,7 +73,9 @@ export class GameService {
         icon: '/assets/img/logos/logo_game_4.png',
         background: '/assets/img/backgrounds/bg_game_4.png',
         cover: '/assets/img/tile_game_4.png',
-        description: `Llegaste al final, sólo te queda demostrar tus habilidades de negociador y poner las piezas en su lugar.`,
+        description: `
+            Llegaste al final, sólo te queda demostrar tus habilidades de <span class="text-pink">negociador</span>
+             y poner las <span class="text-pink">piezas</span> en su lugar.`,
         index: 4,
         textIndex: '/assets/img/texts/text_juego_4.png',
         active: true,
