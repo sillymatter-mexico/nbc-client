@@ -31,7 +31,7 @@ export class GameService {
         maxPoints: 1000,
         highScore: 0,
         highBonus: 0,
-        attempt: 1
+        attempt: 0
       },
       {
         icon: '/assets/img/logos/logo_game_2.png',
@@ -50,7 +50,7 @@ export class GameService {
         maxPoints: 4300,
         highScore: 0,
         highBonus: 0,
-        attempt: 1
+        attempt: 0
       },
       {
         icon: '/assets/img/logos/logo_game_3.png',
@@ -67,7 +67,7 @@ export class GameService {
         maxPoints: 3000,
         highScore: 0,
         highBonus: 0,
-        attempt: 1
+        attempt: 0
       },
       {
         icon: '/assets/img/logos/logo_game_4.png',
@@ -86,7 +86,7 @@ export class GameService {
         maxPoints: 3000,
         highScore: 0,
         highBonus: 0,
-        attempt: 1
+        attempt: 0
       }
     ];
   }

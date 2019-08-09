@@ -40,6 +40,7 @@ export class PointsComponent implements OnInit, AfterViewInit {
   public gameList: any[];
   public loadingContainer: boolean;
   public userInfo: any;
+  public activeGameStatus: string;
 
   constructor(private gameService: GameService, private userService: UserService) {
     this.loadingContainer = false;
@@ -60,11 +61,13 @@ export class PointsComponent implements OnInit, AfterViewInit {
           this.gameList[item.game.order - 1] = {
             ...this.gameList[item.game.order - 1],
             highScore: +item.high_score,
-            highBonus: +item.high_bonus
+            highBonus: +item.high_bonus,
+            attempt: item.attempt
           };
         }
         console.log(this.gameList);
         this.loadingContainer = false;
+        this.activeGameStatus = this.getGameStatus(1);
       }, (error: any) => {
         this.loadingContainer = false;
       });
@@ -72,6 +75,10 @@ export class PointsComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.scoreSlider = new Swiper('.points-slider', this.scoreConfig);
+    this.scoreSlider.on('slideChange', () => {
+      const activeGame = this.scoreSlider.activeIndex + 1;
+      this.activeGameStatus = this.getGameStatus(activeGame);
+    });
   }
 
   getCompletedGames(completed: any) {
@@ -84,6 +91,14 @@ export class PointsComponent implements OnInit, AfterViewInit {
       totalScore += game.highScore + game.highBonus;
     }
     return totalScore;
+  }
+
+  getGameStatus(gameIndex: number) {
+    const game = this.gameList.find((x: any) => x.index === gameIndex);
+    if ((game.highScore + game.highBonus) < game.maxPoints && game.attempt < 3) {
+      return `Tienes ${3 - game.attempt} oportunidades para mejorar tu puntuación`;
+    }
+    return 'Completado';
   }
 
   share() {
