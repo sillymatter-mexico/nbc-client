@@ -1,7 +1,8 @@
 <div class="row text-wall-container">
-  <div class="col-12 col-md-8 offset-md-2 col-xl-4 offset-xl-4">
+  <div class="col-12 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
     <div class="w-100 text-center">
-      <h1 class="text-title text-pink-gradient text-uppercase my-5 font-usans-heavy">{{ title }}</h1>
+      <h1 class="text-title text-pink-gradient text-uppercase mt-5 mb-2 mb-md-5 font-usans-heavy">{{ title }}</h1>
+      <a [href]="file" target="_blank" class="app-btn d-md-none mb-2">Descargar</a>
       <div class="text-wall" #textWall>
         <div class="text-content">
           <ng-content></ng-content>

@@ -1,6 +1,11 @@
 <div class="container-fluid privacy-container">
   <app-navbar></app-navbar>
-  <app-text-wall title="Bases del concurso">
-    <div NgxMd [path]="'/assets/texts/bases.md'"></div>
+  <app-text-wall title="Aviso de privacidad" [file]="file">
+    <pdf-viewer [src]="localFile"
+                [render-text]="true"
+                [fit-to-page]="true"
+                [autoresize]="true"
+                style="display: block;"
+    ></pdf-viewer>
   </app-text-wall>
 </div>

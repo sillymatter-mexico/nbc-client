@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrivacyComponent implements OnInit {
 
-  constructor() { }
+  public file = 'https://agenteuniversal.s3.amazonaws.com/reglas.pdf';
+  public localFile = '/assets/pdfs/reglas.pdf';
+  constructor() {}
 
   ngOnInit() {
   }

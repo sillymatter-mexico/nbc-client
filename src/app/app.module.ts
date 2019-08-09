@@ -29,6 +29,7 @@ import {UserService} from './services/user.service';
 import {AuthGuard} from './guards/auth.guard';
 import {ngxLoadingAnimationTypes, NgxLoadingModule} from 'ngx-loading';
 import { CompletedModalComponent } from './components/completed-modal/completed-modal.component';
+import {PdfViewerModule} from 'ng2-pdf-viewer';
 
 export function onInit(userService: UserService) {
   return () => userService.getSavedSession();
@@ -71,7 +72,8 @@ export function onInit(userService: UserService) {
       primaryColour: '#C71652',
       secondaryColour: '#EE263F',
       tertiaryColour: '#EF5E24'
-    })
+    }),
+    PdfViewerModule
   ],
   entryComponents: [
     CompletedModalComponent

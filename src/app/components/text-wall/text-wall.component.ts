@@ -8,6 +8,7 @@ import SimpleBar from 'simplebar';
 })
 export class TextWallComponent implements OnInit, AfterViewInit {
   @Input() public title: string;
+  @Input() public file: string;
   @ViewChild('textWall', {static: false}) textWall: ElementRef;
 
   constructor() { }
