@@ -27,14 +27,17 @@
             </div>
             <div class="form-group px-3">
               <div class="custom-control custom-checkbox sign-up-checkbox text-left text-md-center" (click)="toggleTerms()">
-                <input type="checkbox" class="custom-control-input"
+                <input type="checkbox" class="custom-control-input" [ngClass]="{'is-invalid': termsError}"
                        id="terms" name="accepts_terms" formControlName="accepts_terms">
                 <label class="custom-control-label">Acepto <a routerLink="/privacidad">términos y condiciones</a></label>
+                <div class="invalid-feedback" *ngIf="termsError" style="letter-spacing: normal;  font-size: 13px;">
+                  Debes aceptar los términos y condiciones
+                </div>
               </div>
             </div>
             <div class="w-100 text-center">
               <button class="app-btn my-3 sign-up-button"
-                      [disabled]="!loginForm.valid || loading" (click)="onLogin()">
+                      [ngClass]="{'disabled' : !loginForm.valid || loading}" (click)="onLogin()">
                 <fa name="circle-o-notch" animation="spin" size="lg" class="mr-3 mt-0" *ngIf="loading"></fa>
                 <span class="text-uppercase">Comenzar</span>
               </button>

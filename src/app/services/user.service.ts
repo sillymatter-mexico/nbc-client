@@ -2,7 +2,7 @@ import {Injectable, Injector} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {catchError, map, retry} from 'rxjs/operators';
 import {throwError} from 'rxjs';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -60,8 +60,6 @@ export class UserService {
       const u: string = localStorage.getItem('user');
       if (u !== undefined && u !== null) {
         this.user = JSON.parse(u);
-        const router = this.injector.get(Router);
-        router.navigate(['/juegos']);
       }
       resolve();
     });

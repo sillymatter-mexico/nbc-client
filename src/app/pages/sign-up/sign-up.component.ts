@@ -13,6 +13,7 @@ export class SignUpComponent implements OnInit {
 
   public loginForm: FormGroup;
   public loginError: string;
+  public termsError: boolean;
   public loading: boolean;
 
   constructor(private formBuilder: FormBuilder,
@@ -30,31 +31,39 @@ export class SignUpComponent implements OnInit {
   }
 
   onLogin() {
-    this.loading = true;
-    const login = {
-      accepts_terms: this.loginForm.value.accepts_terms,
-      club_premier_id: String(this.loginForm.value.club_premier_id)
-    };
-    this.userService.login(login)
-      .subscribe(
-        (response: any) => {
-          this.loading = false;
-          this.userService.user = response;
-          this.router.navigateByUrl('/juegos');
-        },
-        (error: any) => {
-          this.loading = false;
-          this.loginForm.reset();
-          if (error.status === 500) {
-            this.toastrService.error('Intenta más tarde', 'Lo sentimos, ocurrió un error con el servidor');
-          } else {
-            this.loginError = error.error.messages;
+    if (this.loginForm.valid) {
+      this.loading = true;
+      const login = {
+        accepts_terms: this.loginForm.value.accepts_terms,
+        club_premier_id: String(this.loginForm.value.club_premier_id)
+      };
+      this.userService.login(login)
+        .subscribe(
+          (response: any) => {
+            this.loading = false;
+            this.userService.user = response;
+            this.router.navigateByUrl('/juegos');
+          },
+          (error: any) => {
+            this.loading = false;
+            this.loginForm.reset();
+            if (error.status === 500) {
+              this.toastrService.error('Intenta más tarde', 'Lo sentimos, ocurrió un error con el servidor');
+            } else {
+              this.loginError = error.error.messages;
+            }
           }
-        }
-      );
+        );
+    } else {
+      this.termsError = !this.loginForm.controls.accepts_terms.value;
+      if (this.loginForm.controls.club_premier_id.status === 'INVALID') {
+        this.loginError = 'Ingresa un número de Socio Club Premier.';
+      }
+    }
   }
 
   toggleTerms() {
+    this.termsError = false;
     const checked = this.loginForm.controls.accepts_terms.value;
     this.loginForm.controls.accepts_terms.setValue(!checked);
   }

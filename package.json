@@ -31,6 +31,7 @@
     "font-awesome": "^4.7.0",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.26",
+    "ng2-pdf-viewer": "^5.3.3",
     "ngx-bootstrap": "^4.3.0",
     "ngx-loading": "^3.0.1",
     "ngx-md": "^8.0.0",

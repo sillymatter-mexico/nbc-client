@@ -45,7 +45,7 @@ body {
     outline: 0 none;
     box-shadow: 0 0 0 0.2rem rgba(238,38,63,0.6);
   }
-  &:disabled {
+  &.disabled {
     opacity: 0.5;
   }
   &.app-btn-dark {

@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'bases', component: BasesComponent },
   { path: 'juegos', component: GameContainerComponent, canActivate: [AuthGuard] },
   { path: 'puntos', component: PointsComponent, canActivate: [AuthGuard] },
-  { path: '**', redirectTo: '' },
+  { path: '**', redirectTo: 'juegos' },
 ];
 
 @NgModule({
