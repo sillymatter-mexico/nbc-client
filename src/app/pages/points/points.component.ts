@@ -56,8 +56,9 @@ export class PointsComponent implements OnInit, AfterViewInit {
     this.userService.updateUserInfo()
       .subscribe((data: any) => {
         this.userService.gameInfo = data;
+        this.userInfo = data;
+        console.log('user info', this.userInfo);
         for (const item of data.game) {
-          this.userInfo = data;
           this.gameList[item.game.order - 1] = {
             ...this.gameList[item.game.order - 1],
             highScore: +item.high_score,
