@@ -57,7 +57,6 @@ export class PointsComponent implements OnInit, AfterViewInit {
       .subscribe((data: any) => {
         this.userService.gameInfo = data;
         this.userInfo = data;
-        console.log('user info', this.userInfo);
         for (const item of data.game) {
           this.gameList[item.game.order - 1] = {
             ...this.gameList[item.game.order - 1],
@@ -66,7 +65,6 @@ export class PointsComponent implements OnInit, AfterViewInit {
             attempt: item.attempt
           };
         }
-        console.log(this.gameList);
         this.loadingContainer = false;
         this.activeGameStatus = this.getGameStatus(1);
       }, (error: any) => {
@@ -96,8 +94,16 @@ export class PointsComponent implements OnInit, AfterViewInit {
 
   getGameStatus(gameIndex: number) {
     const game = this.gameList.find((x: any) => x.index === gameIndex);
-    if ((game.highScore + game.highBonus) < game.maxPoints && game.attempt < 3) {
-      return `Tienes ${3 - game.attempt} oportunidades para mejorar tu puntuación`;
+    const hasLevels = (game.index === 2 || game.index === 3);
+    const maxAttempt = hasLevels ? 4 : 3;
+
+    if ((game.highScore + game.highBonus) < game.maxPoints && game.attempt < maxAttempt) {
+      if (hasLevels && game.attempt === 3) {
+        return `Tienes ${4 - game.attempt} oportunidad para mejorar tu puntuación`;
+      } else {
+        const chances =  3 - game.attempt === 1 ? 'oportunidad' : 'oportunidades';
+        return `Tienes ${3 - game.attempt} ${chances} para mejorar tu puntuación`;
+      }
     }
     return 'Completado';
   }

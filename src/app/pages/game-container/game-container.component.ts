@@ -58,9 +58,9 @@ export class GameContainerComponent implements OnInit {
             highBonus: +item.high_bonus
           };
         }
-        console.log(this.games);
+        // console.log(this.games);
         this.loadingContainer = false;
-        console.log('game info', data);
+        // console.log('game info', data);
       }, (error: any) => {
         this.loadingContainer = false;
       });
@@ -96,7 +96,7 @@ export class GameContainerComponent implements OnInit {
     this.gameService.createGameSession({number_game: index})
       .subscribe((data: any) => {
         this.loadingContainer = false;
-        console.log('create session data', data);
+        // console.log('create session data', data);
         localStorage.setItem('currentGame', JSON.stringify(data));
         this.currentGameWindow = window.open(url, '_self');
       }, (error: any) => {
@@ -114,7 +114,8 @@ export class GameContainerComponent implements OnInit {
   }
 
   isCompleted(game: any) {
-    return !((game.highScore + game.highBonus) < game.maxPoints && game.attempt < 3);
+    const maxAttempt = (game.index === 1 || game.index === 4) ? 3 : 4;
+    return !((game.highScore + game.highBonus) < game.maxPoints && game.attempt < maxAttempt);
   }
 
   private openCompletedModal(game: number) {
@@ -129,11 +130,10 @@ export class GameContainerComponent implements OnInit {
     for (const game of this.games) {
       const releaseDate = moment(game.releaseDateArray).tz('America/Mexico_City');
       const isAfter = now.isAfter(releaseDate);
-      console.log(now.format() + 'is after ' + releaseDate.format(), isAfter);
       if (isAfter) {
         game.active = true;
       }
     }
-    console.log(this.games);
+    // console.log(this.games);
   }
 }
