@@ -11,7 +11,10 @@
     <a routerLink="/" fragment="mecanica" (click)="toggleMenu()">Mecánica</a>
     <a routerLink="/bases" (click)="toggleMenu()">Bases del concurso</a>
     <a (click)="logout()" *ngIf="userService.loggedIn">Cerrar sesión</a>
-    <a routerLink="/privacidad" class="privacy-link" (click)="toggleMenu()">Aviso de privacidad</a>
+    <a href="https://www.clubpremier.com/mx/acerca-de-club-premier/aviso-de-privacidad/"
+       class="privacy-link" target="_blank" (click)="toggleMenu()">
+      Aviso de privacidad
+    </a>
   </div>
 
   <img src="/assets/img/agent_menu.png" alt="" class="menu-agent img-fluid">
