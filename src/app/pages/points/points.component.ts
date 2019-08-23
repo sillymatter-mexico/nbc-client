@@ -111,7 +111,7 @@ export class PointsComponent implements OnInit, AfterViewInit {
   share() {
     FB.ui({
       method: 'share',
-      href: 'https://agenteuniversal.clubpremier.info',
+      href: 'https://agenteuniversal.clubpremier.com',
       hashtag: '#AgenteUniversal',
       quote: 'He conseguido ' + this.getTotalScore() +
              ' puntos con Agente Universal, entra y participa para la posibilidad de viajar a Chicago y Florencia.'

@@ -45,6 +45,12 @@
       }
     }
   }
+
+  .footer-link-container {
+    width: 280px;
+    vertical-align: top;
+  }
+
   .vertical-divider {
     position: absolute;
     background: rgb(255,255,255);
@@ -96,6 +102,10 @@
         font-size: 12px;
       }
     }
+  }
+  .footer-link-container {
+    max-width: 100%;
+    width: 100%;
   }
   .footer-bottom {
     .logo-club {
