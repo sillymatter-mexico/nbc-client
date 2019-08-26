@@ -40,6 +40,7 @@ body {
     outline: 0 none;
     box-shadow: 0 0 0 0.2rem rgba(238,38,63,0.25);
     text-decoration: none;
+    color: white;
   }
   &:active {
     outline: 0 none;
@@ -47,6 +48,11 @@ body {
   }
   &.disabled {
     opacity: 0.5;
+  }
+  &.app-btn-big {
+    padding: 8px 36px 6px;
+    letter-spacing: 3.05px;
+    font-size: 16px;
   }
   &.app-btn-dark {
     background: rgba(25,11,51,1);

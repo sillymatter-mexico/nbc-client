@@ -1,0 +1,43 @@
+<div class="modal-body">
+  <div class="container-fluid modal-container">
+    <div class="row py-2 px-0">
+      <div class="col-12 text-center">
+        <img [src]="'/assets/img/logos/logo_club_black.png'" alt="" class="img-fluid club-logo">
+        <fa name="close" size="2x" class="mt-1 btn-close float-right"
+            (click)="bsModalRef.hide()"></fa>
+      </div>
+      <div class="col-12 pt-3 pt-md-4">
+        <div class="embed-responsive embed-responsive-16by9">
+          <video controls class="embed-responsive-item" controlsList="nodownload">
+            <source src="/assets/video/promo.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5
+          </video>
+        </div>
+      </div>
+      <div class="col-12 mt-3 pop-up-text text-center">
+        <div class="d-md-inline-block text-left" style="max-width: 300px">
+          <p class="font-unio-italic m-0 font-weight-bold">Para participar</p>
+          <h3 class="font-usans-heavy text-uppercase mb-0">Primero debes ser</h3>
+          <h1 class="font-usans-heavy text-uppercase text-pink-gradient">Socio club premier</h1>
+        </div>
+      </div>
+      <div class="col-12 mt-3 pop-up-buttons text-center">
+        <p class="font-unio-italic m-0 font-weight-bold">Es rápido y sin costo</p>
+        <a class="app-btn app-btn-big mb-3" href="https://member.clubpremier.com/registro" target="_blank">
+          <span class="text-uppercase">Regístrate</span>
+        </a>
+        <br>
+        <p class="font-unio-italic font-weight-bold m-0 text-divider">Ó</p>
+        <br>
+        <p class="font-unio-italic mb-0 mt-2 font-weight-bold">Si ya eres club premier</p>
+        <button class="app-btn app-btn-big mb-3" (click)="goToRegister()">
+          <span class="text-uppercase">Participa ya</span>
+        </button>
+      </div>
+      <div class="col-12 text-center pop-up-logos">
+        <img src="/assets/img/logos/logo_agente_black.png" alt="" class="mr-3">
+        <img src="/assets/img/logos/UTV_logo_black.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,6 +4,8 @@ import {SliderService} from '../../services/slider.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import { Subscription} from 'rxjs';
 import {UserService} from '../../services/user.service';
+import {BsModalRef, BsModalService} from 'ngx-bootstrap';
+import {StartModalComponent} from '../../components/start-modal/start-modal.component';
 
 @Component({
   selector: 'app-landing',
@@ -36,11 +38,17 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
   public chicagoSlider: any;
   public florenciaSlider: any;
   private routeSubscription: Subscription;
+  private bsModalRef: BsModalRef;
 
   constructor(private sliderService: SliderService,
               private route: ActivatedRoute,
               private router: Router,
-              private userService: UserService) {
+              private userService: UserService,
+              private modalService: BsModalService) {
+    if (!this.userService.hasSeenPopUp && !this.userService.loggedIn) {
+      this.bsModalRef = this.modalService.show(StartModalComponent, {});
+      this.userService.hasSeenPopUp = true;
+    }
 
   }
 

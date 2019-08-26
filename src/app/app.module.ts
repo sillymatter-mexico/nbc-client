@@ -30,6 +30,7 @@ import {AuthGuard} from './guards/auth.guard';
 import {ngxLoadingAnimationTypes, NgxLoadingModule} from 'ngx-loading';
 import { CompletedModalComponent } from './components/completed-modal/completed-modal.component';
 import {PdfViewerModule} from 'ng2-pdf-viewer';
+import { StartModalComponent } from './components/start-modal/start-modal.component';
 
 export function onInit(userService: UserService) {
   return () => userService.getSavedSession();
@@ -51,7 +52,8 @@ export function onInit(userService: UserService) {
     BasesComponent,
     GameContainerComponent,
     PointsComponent,
-    CompletedModalComponent
+    CompletedModalComponent,
+    StartModalComponent
 ],
   imports: [
     BrowserModule,
@@ -76,7 +78,8 @@ export function onInit(userService: UserService) {
     PdfViewerModule
   ],
   entryComponents: [
-    CompletedModalComponent
+    CompletedModalComponent,
+    StartModalComponent
   ],
   providers: [
     {

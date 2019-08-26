@@ -12,10 +12,12 @@ export class UserService {
   // tslint:disable-next-line:variable-name
   private _user: any;
   public loggedIn: boolean;
+  public hasSeenPopUp: boolean;
 
   constructor(private http: HttpClient, private injector: Injector) {
     this.loggedIn = false;
     this._user = null;
+    this.hasSeenPopUp = false;
   }
 
   set user(user: any) {
