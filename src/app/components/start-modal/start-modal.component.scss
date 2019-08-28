@@ -10,11 +10,11 @@
   }
   .pop-up-text {
     p {
-      font-size: 22px;
+      font-size: 18px;
     }
     h1 {
       line-height: 0.8;
-      font-size: 48px;
+      font-size: 36px;
     }
   }
   .pop-up-logos {
@@ -52,6 +52,20 @@
         background: black;
         height: 2px;
         z-index: 1060;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-container {
+    .pop-up-text {
+      p {
+        font-size: 22px;
+      }
+      h1 {
+        line-height: 0.8;
+        font-size: 48px;
       }
     }
   }
