@@ -10,11 +10,11 @@
   }
   .pop-up-text {
     p {
-      font-size: 18px;
+      font-size: 16px;
     }
     h1 {
-      line-height: 0.8;
-      font-size: 36px;
+      line-height: normal;
+      font-size: 32px;
     }
   }
   .pop-up-logos {
@@ -29,6 +29,9 @@
     .app-btn {
       width: 100%;
       max-width: 300px;
+    }
+    p {
+      font-size: 14px;
     }
     .text-divider {
       position: relative;
@@ -66,6 +69,11 @@
       h1 {
         line-height: 0.8;
         font-size: 48px;
+      }
+    }
+    .pop-up-buttons {
+      p {
+        font-size: 16px;
       }
     }
   }

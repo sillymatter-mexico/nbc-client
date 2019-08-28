@@ -16,7 +16,7 @@ export class GameService {
     this.gameList = [
       {
         icon: '/assets/img/logos/logo_game_1.png',
-        background: '/assets/img/backgrounds/bg_game_1.png',
+        background: '/assets/img/backgrounds/bg_game_1.jpg',
         cover: '/assets/img/tile_game_1.png',
         description: `
             <br>Este es el primer paso para ser un <span class="text-pink">Agente Universal</span>.<br>
@@ -35,7 +35,7 @@ export class GameService {
       },
       {
         icon: '/assets/img/logos/logo_game_2.png',
-        background: '/assets/img/backgrounds/bg_game_2.png',
+        background: '/assets/img/backgrounds/bg_game_2.jpg',
         cover: '/assets/img/tile_game_2.png',
         description: `
             <br>Para ser un buen detective se necesita una <span class="text-pink">buena memoria</span>.
@@ -54,7 +54,7 @@ export class GameService {
       },
       {
         icon: '/assets/img/logos/logo_game_3.png',
-        background: '/assets/img/backgrounds/bg_game_3.png',
+        background: '/assets/img/backgrounds/bg_game_3.jpg',
         cover: '/assets/img/tile_game_3.png',
         description: `Cada vez más cerca, toma el <span class="text-pink">volante</span> y demuestra que tan buen agente eres.`,
         index: 3,
@@ -71,7 +71,7 @@ export class GameService {
       },
       {
         icon: '/assets/img/logos/logo_game_4.png',
-        background: '/assets/img/backgrounds/bg_game_4.png',
+        background: '/assets/img/backgrounds/bg_game_4.jpg',
         cover: '/assets/img/tile_game_4.png',
         description: `
             Llegaste al final, sólo te queda demostrar tus habilidades de <span class="text-pink">negociador</span>
