@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import Swiper from 'swiper';
 import {SliderService} from '../../services/slider.service';
 import {ActivatedRoute, Router} from '@angular/router';
@@ -40,6 +40,9 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
   private routeSubscription: Subscription;
   private bsModalRef: BsModalRef;
 
+  public sticky = false;
+  @ViewChild('stickyButton', {static: false}) stickyButton: ElementRef;
+
   constructor(private sliderService: SliderService,
               private route: ActivatedRoute,
               private router: Router,
@@ -72,6 +75,12 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
         this.router.navigate([]);
       }
     });
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  handleScroll() {
+    const windowScroll = window.pageYOffset;
+    this.sticky = windowScroll >= 20;
   }
 
   ngOnDestroy() {

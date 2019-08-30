@@ -140,6 +140,21 @@
     }
   }
 }
+.sticky-button {
+  background: -moz-linear-gradient(270deg, #EF5E24 0%, #EE263F 54.2%, #C71652 100%);
+  background: -webkit-linear-gradient(270deg, #EF5E24 0%, #EE263F 54.2%, #C71652 100%);
+  background: linear-gradient(270deg, #EF5E24 0%, #EE263F 54.2%, #C71652 100%);
+  z-index: 1000;
+}
+
+.sticky {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 10;
+  width: 100%;
+}
 
 @media screen and (max-width: 575.98px) {
   .tile-section {

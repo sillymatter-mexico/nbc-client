@@ -44,12 +44,23 @@
     max-height: 35px;
     width: auto;
   }
+  .sign-up-big-text {
+    line-height: normal;
+    font-size: 24px;
+  }
   .sign-up-text {
     font-family: 'Volte Regular', sans-serif;
     letter-spacing: 0.6px;
     text-transform: uppercase;
     font-size: 12px;
     text-align: left;
+  }
+  .sign-up-link {
+    letter-spacing: 2.06px !important;
+    font-size: 12px;
+    text-decoration: underline;
+    color: #007bff;
+    cursor: pointer;
   }
   .sign-up-checkbox {
     color: #A7A7A7!important;
@@ -58,6 +69,9 @@
     cursor: pointer;
     * {
       pointer-events: none;
+    }
+    a {
+      pointer-events: all;
     }
   }
   .custom-control-label:before{
@@ -121,6 +135,9 @@
   .sign-up-box {
     .sign-up-logo {
       max-height: 50px;
+    }
+    .sign-up-big-text {
+      font-size: 40px;
     }
     .sign-up-text {
       font-size: 14px;

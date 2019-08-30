@@ -1,6 +1,15 @@
 <div class="container-fluid landing-container" #start id="inicio">
   <app-navbar></app-navbar>
   <app-slider></app-slider>
+  <div class="sticky-button d-sm-none" #stickyButton
+       [ngClass]="{'sticky w-100': sticky, 'row': !sticky}">
+    <div class="w-100 p-3 text-center">
+      <a class="app-btn outline-btn-light navbar-button text-uppercase"
+              href="https://member.clubpremier.com/registro" target="_blank">
+        Inscríbete
+      </a>
+    </div>
+  </div>
   <div class="row tile-section align-items-stretch">
     <div class="col-6 text-left tile p-0">
       <div class="tile-content tile-gradient d-flex justify-content-center align-items-lg-center align-items-lg-center py-5 py-lg-0">

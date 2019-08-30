@@ -8,14 +8,20 @@
       </p>
     </div>
     <div class="col-12 col-lg-6 px-3 px-lg-5 text-center">
-      <div class="sign-up-box p-3 p-lg-5">
+      <div class="sign-up-box px-3 py-3 px-lg-5">
         <img src="/assets/img/logos/logo_club_black.png" alt="" class="sign-up-logo">
-        <p class="sign-up-text px-3 mt-3 mt-lg-5 mb-2 mb-lg-4">
+        <p class="sign-up-text px-3 mt-3 mb-2 text-center">
           <span class="font-volte-bold">Club Premier</span> te invita a vivir una experiencia increíble.
         </p>
         <div class="w-100" *ngIf="!userService.loggedIn">
           <hr>
-          <p class="sign-up-text px-3 my-2 my-lg-4">
+          <a class="app-btn mb-3 sign-up-button" href="https://member.clubpremier.com/registro" target="_blank">
+            <span class="text-uppercase">Inscribete y gana</span>
+          </a>
+          <h1 class="font-usans-heavy text-uppercase text-pink-gradient mb-0 sign-up-big-text">¿Ya eres socio?</h1>
+          <h1 class="font-usans-heavy text-uppercase text-pink-gradient sign-up-big-text">¡Entonces juega ya!</h1>
+          <hr>
+          <p class="sign-up-text px-3 my-2 text-center">
             Ingresa tu Número de Socio Club Premier para registrarte:
           </p>
           <form [formGroup]="loginForm">
@@ -24,12 +30,14 @@
                      id="associateNumber" placeholder="Número de socio Club Premier" (keydown)="loginError = undefined"
                      formControlName="club_premier_id" [ngClass]="{'is-invalid': loginError !== undefined}">
               <div class="invalid-feedback" *ngIf="loginError !== undefined">{{loginError}}</div>
+              <a (click)="loadRecovery()"
+                 class="sign-up-link mt-3">¿Olvidaste tu número de Socio?</a>
             </div>
             <div class="form-group px-3">
               <div class="custom-control custom-checkbox sign-up-checkbox text-left text-md-center" (click)="toggleTerms()">
                 <input type="checkbox" class="custom-control-input" [ngClass]="{'is-invalid': termsError}"
                        id="terms" name="accepts_terms" formControlName="accepts_terms">
-                <label class="custom-control-label">Acepto <a routerLink="/privacidad">términos y condiciones</a></label>
+                <label class="custom-control-label">Acepto <a routerLink="/bases" class="sign-up-link">términos y condiciones</a></label>
                 <div class="invalid-feedback" *ngIf="termsError" style="letter-spacing: normal;  font-size: 13px;">
                   Debes aceptar los términos y condiciones
                 </div>
@@ -43,16 +51,16 @@
               </button>
             </div>
           </form>
-          <hr>
-          <div class="w-100 text-center">
-            <p class="sign-up-text text-center">
-              ¿Aún no eres socio <span class="font-volte-bold">Club Premier</span>?
-              <br>Inscríbete sin costo en:
-            </p>
-            <a class="app-btn my-3 register-button outline-btn-dark" href="https://member.clubpremier.com/registro" target="_blank">
-              <span class="text-uppercase font-volte-semibold">clubpremier.com</span>
-            </a>
-          </div>
+<!--          <hr>-->
+<!--          <div class="w-100 text-center">-->
+<!--            <p class="sign-up-text text-center">-->
+<!--              ¿Aún no eres socio <span class="font-volte-bold">Club Premier</span>?-->
+<!--              <br>Inscríbete sin costo en:-->
+<!--            </p>-->
+<!--            <a class="app-btn my-3 register-button outline-btn-dark" href="https://member.clubpremier.com/registro" target="_blank">-->
+<!--              <span class="text-uppercase font-volte-semibold">clubpremier.com</span>-->
+<!--            </a>-->
+<!--          </div>-->
         </div>
         <div class="w-100 text-center" *ngIf="userService.loggedIn">
           <button class="app-btn my-3 sign-up-button" routerLink="/juegos">
