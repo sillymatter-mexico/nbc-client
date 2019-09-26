@@ -67,4 +67,8 @@ export class SignUpComponent implements OnInit {
     const checked = this.loginForm.controls.accepts_terms.value;
     this.loginForm.controls.accepts_terms.setValue(!checked);
   }
+
+  loadPage(page: string) {
+    window.open(page, '_blank');
+  }
 }
