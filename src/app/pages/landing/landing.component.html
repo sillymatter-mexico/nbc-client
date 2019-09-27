@@ -6,33 +6,28 @@
     <div class="col-12 main-row">
       <div class="container-fluid px-0">
         <div class="row pt-4 pb-5 py-lg-3 px-1 px-lg-3">
-          <div class="col-12 col-lg-6 text-right pl-0 pr-3 px-lg-3 d-flex justify-content-center">
+          <div class="col-12 col-lg-6 text-right pl-0 pr-3 px-lg-3 d-flex justify-content-center border-right" style="border-color: rgba(255,255,255,0.3)!important;">
             <div class="text-right">
               <p class="text-white font-unio-italic m-0 main-subtitle">Agente Universal</p>
               <h3 class="text-uppercase font-usans-heavy text-white m-0 main-small-title">Participa por un viaje a</h3>
               <h3 class="text-uppercase font-usans-heavy text-white m-0 main-title">
                 <span class="text-pink-gradient">Chicago</span> y<br><span class="text-pink-gradient">Florencia</span>
               </h3>
-              <p class="text-white font-volte-regular mt-3 main-small position-relative mb-0 d-block d-lg-none" style="z-index: 10">
-                ¿Aún no eres <strong>Socio Club Premier</strong>? Regístrate <a class="subtle-link d-inline-block" href="https://member.clubpremier.com/registro" target="_blank">aquí</a>
-              </p>
             </div>
           </div>
           <div class="col-12 col-lg-6 text-left px-0 px-lg-3 position-relative">
-            <div class="w-100 h-100 d-flex align-items-center justify-content-start">
-              <div class="text-center d-none d-lg-block">
-                <a class="app-btn slide-button main-btn" [routerLink]="userService.loggedIn ? ['/juegos'] : ['/registro']">
-                  <span class="text-uppercase">Participa</span>
+            <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+              <div class="text-center">
+                <a class="app-btn slide-button main-btn mt-3 mt-lg-0" [routerLink]="userService.loggedIn ? ['/juegos'] : ['/registro']">
+                  <span class="text-uppercase">Entrar</span>
                 </a>
                 <p class="text-white font-volte-regular mt-3 main-small position-relative mb-0" style="z-index: 10">
-                  ¿Aún no eres <strong>Socio Club Premier</strong>? Regístrate <a class="subtle-link d-inline-block" href="https://member.clubpremier.com/registro" target="_blank">aquí</a>
+                  ¿Aún no eres <strong>Socio Club Premier</strong>? <br class="d-lg-none">
+                  Regístrate <a class="subtle-link d-inline-block" href="https://member.clubpremier.com/registro" target="_blank">aquí</a>
                 </p>
               </div>
             </div>
           </div>
-          <a class="app-btn slide-button main-btn-mobile d-lg-none" [routerLink]="userService.loggedIn ? ['/juegos'] : ['/registro']">
-            <span class="text-uppercase">Participa</span>
-          </a>
         </div>
       </div>
     </div>
