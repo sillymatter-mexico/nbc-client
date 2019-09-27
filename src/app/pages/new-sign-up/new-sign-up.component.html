@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <app-navbar></app-navbar>
+  <div class="row main-section flex-column align-items-center">
+    <div class="col-12 chicago-row image-row flex-grow-1"></div>
+    <div class="col-12 main-row">
+      <div class="container-fluid px-0">
+        <div class="row pt-4 pb-5 py-lg-3 px-1 px-lg-3">
+          <div class="col-12 col-lg-6 text-right pl-0 pr-3 px-lg-3 d-flex align-items-center justify-content-center justify-content-lg-end">
+            <div class="text-left text-lg-right">
+              <p class="text-white font-unio-italic m-0 main-subtitle">Agente Universal</p>
+              <h3 class="text-uppercase font-usans-heavy text-white m-0 main-small-title">Participa por un viaje a</h3>
+              <h3 class="text-uppercase font-usans-heavy text-white m-0 main-title">
+                <span class="text-pink-gradient">Chicago</span> y<br><span class="text-pink-gradient">Florencia</span>
+              </h3>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 text-left px-0 px-lg-3 position-relative">
+            <div class="w-100 h-100 d-flex align-items-center justify-content-center justify-content-lg-start">
+              <div class="text-center px-3 px-lg-0">
+                <div class="sign-up-box p-3 px-lg-5 mt-3 mt-lg-0">
+                  <img src="/assets/img/logos/logo_club_black.png" alt="" class="sign-up-logo">
+                  <div class="w-100" *ngIf="!userService.loggedIn">
+                    <p class="sign-up-text px-3 my-2 my-lg-3">
+                      Ingresa tu Número de Socio Club Premier para registrarte
+                    </p>
+                    <form [formGroup]="loginForm">
+                      <div class="form-group px-0 px-lg-3">
+                        <input type="number" class="form-control app-input my-3 my-md-0" name="club_premier_id"
+                               id="associateNumber" placeholder="Número de socio Club Premier" (keydown)="loginError = undefined"
+                               formControlName="club_premier_id" [ngClass]="{'is-invalid': loginError !== undefined}">
+                        <div class="invalid-feedback" *ngIf="loginError !== undefined">{{loginError}}</div>
+                      </div>
+                      <div class="w-100 text-center">
+                        <button class="app-btn mt-1 mb-2 sign-up-button"
+                                [ngClass]="{'disabled' : !loginForm.valid || loading}" (click)="onLogin()">
+                          <fa name="circle-o-notch" animation="spin" size="lg" class="mr-3 mt-0" *ngIf="loading"></fa>
+                          <span class="text-uppercase">Comenzar</span>
+                        </button>
+                        <br>
+                        <a href="https://member.clubpremier.com/individual/recuperacuenta" target="_blank" class="small-text">
+                          <u>¿Olvidaste tu número de Socio Club Premier?</u>
+                        </a>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="w-100 text-center" *ngIf="userService.loggedIn">
+                    <button class="app-btn my-3 sign-up-button" routerLink="/juegos">
+                      <span class="text-uppercase">Comenzar</span>
+                    </button>
+                  </div>
+                </div>
+                <p class="text-white font-volte-regular mt-3 small-text position-relative mb-0" style="z-index: 10">
+                  ¿Aún no eres <strong>Socio Club Premier</strong>? Regístrate <a class="subtle-link d-inline-block" href="https://member.clubpremier.com/registro" target="_blank">aquí</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 florencia-row image-row flex-grow-1"></div>
+  </div>
+</div>

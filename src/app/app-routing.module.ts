@@ -7,9 +7,11 @@ import {BasesComponent} from './pages/bases/bases.component';
 import {GameContainerComponent} from './pages/game-container/game-container.component';
 import {PointsComponent} from './pages/points/points.component';
 import {AuthGuard} from './guards/auth.guard';
+import {NewSignUpComponent} from './pages/new-sign-up/new-sign-up.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
+  { path: 'registro', component: NewSignUpComponent },
   { path: 'premios', component: RewardsComponent },
   { path: 'privacidad', component: PrivacyComponent },
   { path: 'bases', component: BasesComponent },

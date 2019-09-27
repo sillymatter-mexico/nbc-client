@@ -2,6 +2,65 @@
   padding: 0 calc(1rem - 1px);
 }
 
+.main-section {
+  min-height: calc(100vh - 102px);
+  background: rgba(25,11,51,1);
+  background: linear-gradient(108.12deg, #2B8B78 0%, #190B33 100%);
+  background: -webkit-linear-gradient(108.12deg, #2B8B78 0%, #190B33 100%);
+  background: -moz-linear-gradient(108.12deg, #2B8B78 0%, #190B33 100%);
+  background-position: bottom right;
+  background-size: 220% 100%;
+  .main-row {
+    background: rgba(25,11,51,1);
+    background: linear-gradient(108.12deg, #2B8B78 0%, #190B33 100%);
+    background: -webkit-linear-gradient(108.12deg, #2B8B78 0%, #190B33 100%);
+    background: -moz-linear-gradient(108.12deg, #2B8B78 0%, #190B33 100%);
+    background-position: bottom right;
+    background-size: 220% 100%;
+  }
+  .chicago-row {
+    background: url("/assets/img/chicago_main.jpg") center center;
+  }
+  .florencia-row {
+    background: url("/assets/img/florencia_long.jpg") center center;
+  }
+  .image-row {
+    background-size: cover;
+  }
+  .main-agent {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 33%;
+    max-width: 210px;
+    height: auto;
+  }
+  .main-btn-mobile {
+    position: absolute;
+    left: calc(50% - 140px);
+    bottom: -21px;
+    min-width: 280px;
+    z-index: 11;
+    text-align: center;
+  }
+  .main-btn {
+    min-width: 280px;
+  }
+  .main-subtitle {
+    font-size: 20px;
+  }
+  .main-small-title {
+    font-size: 28px;
+  }
+  .main-title {
+    font-size: 64px;
+    line-height: 0.9;
+  }
+  .main-small {
+    font-size: 14px;
+  }
+}
+
 .tile-section {
   .tile {
     overflow: hidden;
@@ -90,6 +149,22 @@
 }
 
 @media (min-width: 992px) {
+  .main-section {
+    .main-subtitle {
+      font-size: 25px;
+    }
+    .main-small-title {
+      font-size: 38px;
+    }
+    .main-title {
+      font-size: 85px;
+      line-height: 0.9;
+    }
+    .main-small {
+      font-size: 14px;
+    }
+  }
+
   .tile-section {
     .tile {
       .tile-content {
@@ -142,6 +217,26 @@
 }
 
 @media screen and (max-width: 575.98px) {
+  .main-section {
+    min-height: calc(100vh - 68.75px);
+    .main-btn {
+      min-width: 280px;
+    }
+    .main-subtitle {
+      font-size: 14px;
+    }
+    .main-small-title {
+      font-size: 22px;
+    }
+    .main-title {
+      font-size: 50px;
+      line-height: 0.9;
+    }
+    .small-text {
+      font-size: 12px;
+    }
+  }
+
   .tile-section {
     .app-btn {
       max-width: 80%;

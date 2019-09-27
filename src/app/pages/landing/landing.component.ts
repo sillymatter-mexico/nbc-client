@@ -46,7 +46,7 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
               private userService: UserService,
               private modalService: BsModalService) {
     if (!this.userService.hasSeenPopUp && !this.userService.loggedIn) {
-      this.bsModalRef = this.modalService.show(StartModalComponent, {});
+      // this.bsModalRef = this.modalService.show(StartModalComponent, {});
       this.userService.hasSeenPopUp = true;
     }
 

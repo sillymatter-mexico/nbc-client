@@ -31,6 +31,7 @@ import {ngxLoadingAnimationTypes, NgxLoadingModule} from 'ngx-loading';
 import { CompletedModalComponent } from './components/completed-modal/completed-modal.component';
 import {PdfViewerModule} from 'ng2-pdf-viewer';
 import { StartModalComponent } from './components/start-modal/start-modal.component';
+import { NewSignUpComponent } from './pages/new-sign-up/new-sign-up.component';
 
 export function onInit(userService: UserService) {
   return () => userService.getSavedSession();
@@ -53,7 +54,8 @@ export function onInit(userService: UserService) {
     GameContainerComponent,
     PointsComponent,
     CompletedModalComponent,
-    StartModalComponent
+    StartModalComponent,
+    NewSignUpComponent
 ],
   imports: [
     BrowserModule,
