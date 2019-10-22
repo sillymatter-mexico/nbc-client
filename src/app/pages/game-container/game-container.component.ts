@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {fadeInOutAnimation} from '../../animations/router.animation';
 import {UserService} from '../../services/user.service';
 import {GameService} from '../../services/game.service';
@@ -14,7 +14,7 @@ import * as moment from 'moment-timezone';
   styleUrls: ['./game-container.component.scss'],
   animations: [fadeInOutAnimation]
 })
-export class GameContainerComponent implements OnInit {
+export class GameContainerComponent implements OnInit, AfterViewInit {
 
   public games: any[];
   public selectedGame: number;
@@ -43,6 +43,10 @@ export class GameContainerComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  async ngAfterViewInit() {
+    await this.loadConversionPixel();
   }
 
   fetchGameInfo() {
@@ -135,5 +139,19 @@ export class GameContainerComponent implements OnInit {
       }
     }
     // console.log(this.games);
+  }
+
+  private loadConversionPixel() {
+    return new Promise((resolve, reject) => {
+      const axel: any = Math.random() + '';
+      const a = axel * 10000000000000;
+      const src =  'https://ad.doubleclick.net/ddm/activity/src=9593238;type=invmedia;cat=conve0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=' + a + '?';
+      const img = document.createElement('img');
+      img.src = src;
+      img.width = 1;
+      img.height = 1;
+      img.onload = resolve;
+      document.body.appendChild(img);
+    });
   }
 }

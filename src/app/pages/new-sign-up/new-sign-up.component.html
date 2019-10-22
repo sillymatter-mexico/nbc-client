@@ -4,7 +4,7 @@
     <div class="col-12 chicago-row image-row flex-grow-1"></div>
     <div class="col-12 main-row">
       <div class="container-fluid px-0">
-        <div class="row pt-4 pb-5 py-lg-3 px-1 px-lg-3">
+        <div class="row py-4 py-lg-3 px-1 px-lg-3">
           <div class="col-12 col-lg-6 text-right pl-0 pr-3 px-lg-3 d-flex align-items-center justify-content-center justify-content-lg-end">
             <div class="text-left text-lg-right">
               <p class="text-white font-unio-italic m-0 main-subtitle">Agente Universal</p>
@@ -21,12 +21,12 @@
                   <img src="/assets/img/logos/logo_club_black.png" alt="" class="sign-up-logo">
                   <div class="w-100" *ngIf="!userService.loggedIn">
                     <p class="sign-up-text px-3 my-2 my-lg-3">
-                      Ingresa tu Número de Socio Club Premier para registrarte
+                      Ingresa tu Número de Socio Club Premier ¡Y participa!
                     </p>
                     <form [formGroup]="loginForm">
                       <div class="form-group px-0 px-lg-3">
                         <input type="number" class="form-control app-input my-3 my-md-0" name="club_premier_id"
-                               id="associateNumber" placeholder="Número de socio Club Premier" (keydown)="loginError = undefined"
+                               id="associateNumber" placeholder="Número de Socio Club Premier" (keydown)="loginError = undefined"
                                formControlName="club_premier_id" [ngClass]="{'is-invalid': loginError !== undefined}">
                         <div class="invalid-feedback" *ngIf="loginError !== undefined">{{loginError}}</div>
                       </div>
@@ -37,7 +37,7 @@
                           <span class="text-uppercase">Comenzar</span>
                         </button>
                         <br>
-                        <a href="https://member.clubpremier.com/individual/recuperacuenta" target="_blank" class="small-text">
+                        <a href="https://member.clubpremier.com/individual/recuperacuenta" target="_blank" class="main-small">
                           <u>¿Olvidaste tu número de Socio Club Premier?</u>
                         </a>
                       </div>
@@ -50,8 +50,9 @@
                   </div>
                 </div>
                 <p class="text-white font-volte-regular mt-3 small-text position-relative mb-0" style="z-index: 10">
-                  ¿Aún no eres <strong>Socio Club Premier</strong>? Regístrate <a class="subtle-link d-inline-block" href="https://member.clubpremier.com/registro" target="_blank">aquí</a>
+                  ¿Aún no eres <strong>Socio Club Premier</strong>? Inscríbete <a class="subtle-link d-inline-block" href="https://member.clubpremier.com/registro" target="_blank">aquí</a>
                 </p>
+                <a class="subtle-link small-text d-inline-block mt-2 mb-0" routerLink="/bases" target="_blank">Términos y condiciones</a>
               </div>
             </div>
           </div>
