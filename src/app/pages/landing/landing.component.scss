@@ -52,12 +52,18 @@
   .main-small-title {
     font-size: 28px;
   }
+  .main-smallest-title {
+    font-size: 14px;
+  }
   .main-title {
     font-size: 64px;
     line-height: 0.9;
   }
   .main-small {
     font-size: 18px;
+  }
+  .main-image {
+    width: 350px; max-width: 100%;
   }
 }
 
@@ -156,6 +162,9 @@
     .main-small-title {
       font-size: 38px;
     }
+    .main-smallest-title {
+      font-size: 16px;
+    }
     .main-title {
       font-size: 85px;
       line-height: 0.9;
@@ -163,6 +172,7 @@
     .main-small {
       font-size: 16px;
     }
+
   }
 
   .tile-section {
@@ -228,12 +238,18 @@
     .main-small-title {
       font-size: 22px;
     }
+    .main-smallest-title {
+      font-size: 14px;
+    }
     .main-title {
       font-size: 50px;
       line-height: 0.9;
     }
     .main-small {
       font-size: 16px;
+    }
+    .main-image {
+      width: 250px;
     }
   }
 
