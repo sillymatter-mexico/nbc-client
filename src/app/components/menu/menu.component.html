@@ -4,8 +4,8 @@
 
   <div class="overlay-content">
     <a routerLink="/" fragment="inicio" (click)="toggleMenu()">Inicio</a>
-    <a routerLink="/registro" (click)="toggleMenu()" *ngIf="!userService.loggedIn">Registro</a>
-    <a routerLink="/juegos" (click)="toggleMenu()" *ngIf="userService.loggedIn">Juegos</a>
+<!--    <a routerLink="/registro" (click)="toggleMenu()" *ngIf="!userService.loggedIn">Registro</a>-->
+<!--    <a routerLink="/juegos" (click)="toggleMenu()" *ngIf="userService.loggedIn">Juegos</a>-->
     <a routerLink="/puntos" (click)="toggleMenu()" *ngIf="userService.loggedIn">Mis puntos</a>
     <a routerLink="/premios" (click)="toggleMenu()">Premios</a>
     <a routerLink="/" fragment="mecanica" (click)="toggleMenu()">Mecánica</a>

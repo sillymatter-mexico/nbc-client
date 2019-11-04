@@ -11,7 +11,7 @@ import {NewSignUpComponent} from './pages/new-sign-up/new-sign-up.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
-  { path: 'registro', component: NewSignUpComponent },
+  // { path: 'registro', component: NewSignUpComponent },
   { path: 'premios', component: RewardsComponent },
   { path: 'privacidad', component: PrivacyComponent },
   { path: 'bases', component: BasesComponent },

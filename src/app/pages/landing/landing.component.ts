@@ -80,7 +80,7 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
 
   goToRegister(element: any) {
     if (this.userService.loggedIn) {
-      this.router.navigateByUrl('/juegos');
+      this.router.navigateByUrl('/puntos');
     } else  {
       element.scrollIntoView({behavior: 'smooth', block: 'start'});
       this.sliderService.changeSlide(0);
